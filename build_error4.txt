@@ -1,0 +1,35 @@
+
+> fcc-trademark@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.8s
+  Running TypeScript ...
+Failed to type check.
+
+./store/inspectionsStore.ts:26:29
+Type error: Argument of type '(state: InspectionsState) => InspectionsState | { inspections: ({ id: string; booking_ref: string; flagged_hs_codes: string[]; port: string; status: string; ... 4 more ...; sync_status: string; } | Inspection)[]; }' is not assignable to parameter of type 'InspectionsState | Partial<InspectionsState> | ((state: InspectionsState) => InspectionsState | Partial<...>)'.
+  Type '(state: InspectionsState) => InspectionsState | { inspections: ({ id: string; booking_ref: string; flagged_hs_codes: string[]; port: string; status: string; ... 4 more ...; sync_status: string; } | Inspection)[]; }' is not assignable to type '(state: InspectionsState) => InspectionsState | Partial<InspectionsState>'.
+    Type 'InspectionsState | { inspections: ({ id: string; booking_ref: string; flagged_hs_codes: string[]; port: string; status: string; flagged_at: string; importer: string; cfa: string; goods_summary: string; sync_status: string; } | Inspection)[]; }' is not assignable to type 'InspectionsState | Partial<InspectionsState>'.
+      Type '{ inspections: ({ id: string; booking_ref: string; flagged_hs_codes: string[]; port: string; status: string; flagged_at: string; importer: string; cfa: string; goods_summary: string; sync_status: string; } | Inspection)[]; }' is not assignable to type 'InspectionsState | Partial<InspectionsState>'.
+        Type '{ inspections: ({ id: string; booking_ref: string; flagged_hs_codes: string[]; port: string; status: string; flagged_at: string; importer: string; cfa: string; goods_summary: string; sync_status: string; } | Inspection)[]; }' is not assignable to type 'Partial<InspectionsState>'.
+          Types of property 'inspections' are incompatible.
+            Type '({ id: string; booking_ref: string; flagged_hs_codes: string[]; port: string; status: string; flagged_at: string; importer: string; cfa: string; goods_summary: string; sync_status: string; } | Inspection)[]' is not assignable to type 'Inspection[]'.
+              Type '{ id: string; booking_ref: string; flagged_hs_codes: string[]; port: string; status: string; flagged_at: string; importer: string; cfa: string; goods_summary: string; sync_status: string; } | Inspection' is not assignable to type 'Inspection'.
+                Property 'tanoga_ref' is missing in type '{ id: string; booking_ref: string; flagged_hs_codes: string[]; port: string; status: string; flagged_at: string; importer: string; cfa: string; goods_summary: string; sync_status: string; }' but required in type 'Inspection'.
+
+  [90m24 |[0m     (set) => ({
+  [90m25 |[0m       inspections: mockInspections [36mas[0m [33mInspection[0m[],
+[31m[1m>[0m [90m26 |[0m       syncTANOGA: () => set((state) => {
+  [90m   |[0m                             [31m[1m^[0m
+  [90m27 |[0m           [36mconst[0m newEntry = mockTanoga[[33mMath[0m.floor([33mMath[0m.random() * mockTanoga.length)];
+  [90m28 |[0m           [36mif[0m (newEntry && !state.inspections.find(i => i.id === newEntry.id)) {
+  [90m29 |[0m               [36mreturn[0m { inspections: [newEntry, ...state.inspections] };
+Next.js build worker exited with code: 1 and signal: null
+npm notice
+npm notice New major version of npm available! 10.8.3 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice

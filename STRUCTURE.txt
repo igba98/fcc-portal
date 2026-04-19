@@ -1,0 +1,223 @@
+fcc-trademark-system/
+├── .env.local
+├── next.config.ts
+├── tailwind.config.ts
+├── components.json                    # shadcn config
+├── tsconfig.json
+├── package.json
+│
+├── public/
+│   ├── logo-fcc.png
+│   ├── logo-cybergen.png
+│   └── mock-trademark-images/
+│       ├── tm-001.png
+│       ├── tm-002.png
+│       └── tm-003.png
+│
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx                 # Root layout
+│   │   ├── page.tsx                   # Landing/Login gateway
+│   │   │
+│   │   ├── (auth)/
+│   │   │   ├── login/
+│   │   │   │   └── page.tsx           # Login page (external + internal links)
+│   │   │   ├── register/
+│   │   │   │   └── page.tsx           # Account creation (individual/partner/company)
+│   │   │   └── verify-email/
+│   │   │       └── page.tsx
+│   │   │
+│   │   ├── (external)/                # External portal
+│   │   │   ├── layout.tsx             # External layout + nav
+│   │   │   ├── dashboard/
+│   │   │   │   └── page.tsx           # Owner/Agent home dashboard
+│   │   │   ├── applications/
+│   │   │   │   ├── page.tsx           # My applications list
+│   │   │   │   ├── new/
+│   │   │   │   │   └── page.tsx       # New recordation (Form FCC 1 — multi-step)
+│   │   │   │   └── [id]/
+│   │   │   │       └── page.tsx       # Application detail + status
+│   │   │   ├── trademarks/
+│   │   │   │   ├── page.tsx           # My registered trademarks
+│   │   │   │   └── [id]/
+│   │   │   │       ├── page.tsx       # Trademark detail
+│   │   │   │       ├── renew/
+│   │   │   │       │   └── page.tsx   # Renewal flow
+│   │   │   │       ├── amend/
+│   │   │   │       │   └── page.tsx   # Alteration/Amendment
+│   │   │   │       ├── ownership/
+│   │   │   │       │   └── page.tsx   # Change of ownership
+│   │   │   │       └── name-change/
+│   │   │   │           └── page.tsx   # Change of name
+│   │   │   ├── agents/
+│   │   │   │   ├── page.tsx           # My agents list
+│   │   │   │   └── appoint/
+│   │   │   │       └── page.tsx       # Appoint new agent (upload POA)
+│   │   │   ├── payments/
+│   │   │   │   ├── page.tsx           # Payment history
+│   │   │   │   └── [id]/
+│   │   │   │       └── page.tsx       # Payment / GePG mock checkout
+│   │   │   ├── certificates/
+│   │   │   │   └── page.tsx           # Download certificates
+│   │   │   └── public-register/
+│   │   │       └── page.tsx           # Public trademark search
+│   │   │
+│   │   ├── (internal)/                # Internal FCC portal
+│   │   │   ├── layout.tsx             # Internal layout + sidebar nav
+│   │   │   ├── dashboard/
+│   │   │   │   └── page.tsx           # Role-specific dashboard (CI/DAC/ACEM/TRO/ACSM/CSO)
+│   │   │   ├── applications/
+│   │   │   │   ├── page.tsx           # All applications queue
+│   │   │   │   └── [id]/
+│   │   │   │       └── page.tsx       # Review + approve/reject + assign
+│   │   │   ├── register/
+│   │   │   │   ├── page.tsx           # Full register search (internal)
+│   │   │   │   └── [id]/
+│   │   │   │       └── page.tsx       # Full trademark record view
+│   │   │   ├── renewals/
+│   │   │   │   └── page.tsx           # Renewal applications queue
+│   │   │   ├── maintenance/
+│   │   │   │   └── page.tsx           # Amendments/ownership/name changes queue
+│   │   │   ├── inspections/
+│   │   │   │   ├── page.tsx           # TANOGA flagged shipments (ACSM view)
+│   │   │   │   ├── assign/
+│   │   │   │   │   └── page.tsx       # Assign CSO to inspection
+│   │   │   │   └── [id]/
+│   │   │   │       └── page.tsx       # Inspection detail + outcome recording
+│   │   │   ├── enforcement/
+│   │   │   │   ├── page.tsx           # Seizure cases list
+│   │   │   │   └── [id]/
+│   │   │   │       └── page.tsx       # Compoundment + fine calculation + Form G
+│   │   │   ├── agents/
+│   │   │   │   └── page.tsx           # Agent management (view/revoke)
+│   │   │   ├── users/
+│   │   │   │   ├── page.tsx           # Staff user management (CI only)
+│   │   │   │   └── [id]/
+│   │   │   │       └── page.tsx       # User detail / role assignment
+│   │   │   ├── reports/
+│   │   │   │   └── page.tsx           # KPI dashboard + analytics
+│   │   │   └── brela/
+│   │   │       └── page.tsx           # BRELA mock verification panel
+│   │   │
+│   │   └── api/                       # Mock API routes (no DB — state from mock data)
+│   │       ├── auth/
+│   │       │   └── [...nextauth]/
+│   │       │       └── route.ts
+│   │       ├── applications/
+│   │       │   ├── route.ts           # GET all, POST new
+│   │       │   └── [id]/
+│   │       │       └── route.ts       # GET, PATCH, DELETE
+│   │       ├── trademarks/
+│   │       │   ├── route.ts
+│   │       │   └── [id]/
+│   │       │       └── route.ts
+│   │       ├── inspections/
+│   │       │   ├── route.ts
+│   │       │   └── [id]/
+│   │       │       └── route.ts
+│   │       ├── gepg/
+│   │       │   └── route.ts           # Mock GePG payment + control number
+│   │       ├── brela/
+│   │       │   └── route.ts           # Mock BRELA validation
+│   │       ├── tanoga/
+│   │       │   └── route.ts           # Mock TANOGA flagged shipments
+│   │       └── certificates/
+│   │           └── [id]/
+│   │               └── route.ts       # PDF certificate generation
+│   │
+│   ├── components/
+│   │   ├── ui/                        # shadcn auto-generated components
+│   │   ├── layout/
+│   │   │   ├── ExternalNav.tsx
+│   │   │   ├── InternalSidebar.tsx
+│   │   │   ├── TopBar.tsx
+│   │   │   └── Footer.tsx
+│   │   ├── auth/
+│   │   │   ├── LoginForm.tsx
+│   │   │   ├── RegisterForm.tsx
+│   │   │   └── RoleGuard.tsx          # Route protection by role
+│   │   ├── applications/
+│   │   │   ├── ApplicationCard.tsx
+│   │   │   ├── ApplicationForm.tsx    # Multi-step Form FCC 1
+│   │   │   ├── ApplicationTable.tsx
+│   │   │   ├── StatusBadge.tsx
+│   │   │   └── ReviewPanel.tsx        # TRO/ACEM review UI
+│   │   ├── trademarks/
+│   │   │   ├── TrademarkCard.tsx
+│   │   │   ├── TrademarkTable.tsx
+│   │   │   ├── TrademarkDetailView.tsx
+│   │   │   └── TrademarkSearchBar.tsx
+│   │   ├── register/
+│   │   │   ├── RegisterSearch.tsx
+│   │   │   └── RegisterEntry.tsx
+│   │   ├── payments/
+│   │   │   ├── GePGModal.tsx          # Mock GePG payment modal
+│   │   │   ├── PaymentReceipt.tsx
+│   │   │   └── PaymentHistory.tsx
+│   │   ├── certificates/
+│   │   │   ├── CertificatePreview.tsx
+│   │   │   └── CertificateDownload.tsx # PDF generation trigger
+│   │   ├── inspections/
+│   │   │   ├── ShipmentCard.tsx
+│   │   │   ├── InspectionForm.tsx
+│   │   │   └── SeizureReport.tsx
+│   │   ├── enforcement/
+│   │   │   ├── CompoundmentForm.tsx   # Fine calculator
+│   │   │   ├── FormG.tsx              # Compoundment order
+│   │   │   └── WarehouseReceipt.tsx
+│   │   ├── dashboard/
+│   │   │   ├── StatsCard.tsx
+│   │   │   ├── ActivityFeed.tsx
+│   │   │   ├── KPIChart.tsx
+│   │   │   └── AlertsBanner.tsx       # Expiry alerts
+│   │   ├── brela/
+│   │   │   └── BrelaVerificationModal.tsx
+│   │   └── shared/
+│   │       ├── FileUploader.tsx
+│   │       ├── MotionWrapper.tsx      # Framer Motion page transitions
+│   │       ├── ConfirmDialog.tsx
+│   │       ├── EmptyState.tsx
+│   │       └── LoadingSpinner.tsx
+│   │
+│   ├── lib/
+│   │   ├── auth.ts                    # NextAuth config + role definitions
+│   │   ├── pdf.ts                     # PDF generation (jsPDF / @react-pdf)
+│   │   ├── gepg.ts                    # Mock GePG integration
+│   │   ├── brela.ts                   # Mock BRELA API calls
+│   │   ├── tanoga.ts                  # Mock TANOGA sync
+│   │   ├── notifications.ts           # Mock email/SMS sender
+│   │   ├── fine-calculator.ts         # Compoundment fine logic
+│   │   └── utils.ts
+│   │
+│   ├── hooks/
+│   │   ├── useApplications.ts
+│   │   ├── useTrademarks.ts
+│   │   ├── useInspections.ts
+│   │   ├── useAuth.ts
+│   │   └── useNotifications.ts
+│   │
+│   ├── store/
+│   │   ├── index.ts                   # Zustand store root
+│   │   ├── applicationsStore.ts       # CRUD state for applications
+│   │   ├── trademarksStore.ts         # CRUD state for trademarks
+│   │   ├── inspectionsStore.ts
+│   │   ├── usersStore.ts
+│   │   └── notificationsStore.ts
+│   │
+│   ├── data/
+│   │   ├── mock-users.ts
+│   │   ├── mock-applications.ts
+│   │   ├── mock-trademarks.ts
+│   │   ├── mock-inspections.ts
+│   │   ├── mock-enforcement.ts
+│   │   ├── mock-gepg.ts
+│   │   ├── mock-brela.ts
+│   │   └── mock-tanoga.ts
+│   │
+│   └── types/
+│       ├── user.ts
+│       ├── application.ts
+│       ├── trademark.ts
+│       ├── inspection.ts
+│       ├── enforcement.ts
+│       └── certificate.ts

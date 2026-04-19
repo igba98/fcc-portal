@@ -1,0 +1,27 @@
+
+> fcc-trademark@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.1s
+  Running TypeScript ...
+Failed to type check.
+
+./app/internal/inspections/[id]/page.tsx:122:34
+Type error: Cannot find name 'Label'.
+
+  [90m120 |[0m                         <div className=[32m"space-y-4 mb-6"[0m>
+  [90m121 |[0m                             <div className=[32m"space-y-2"[0m>
+[31m[1m>[0m [90m122 |[0m                                 <[33mLabel[0m>[33mInspection[0m [33mFindings[0m *</[33mLabel[0m>
+  [90m    |[0m                                  [31m[1m^[0m
+  [90m123 |[0m                                 <[33mTextarea[0m 
+  [90m124 |[0m                                     className=[32m"resize-none h-32 focus-visible:ring-indigo...[0m
+  [90m125 |[0m                                     placeholder=[32m"Enter physical inspection findings, disc...[0m
+Next.js build worker exited with code: 1 and signal: null
+npm notice
+npm notice New major version of npm available! 10.8.3 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice

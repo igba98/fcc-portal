@@ -1,0 +1,28 @@
+
+> fcc-trademark@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.7s
+  Running TypeScript ...
+Failed to type check.
+
+./store/notificationsStore.ts:24:22
+Type error: Conversion of type '{ id: string; user_id: string; type: string; title: string; message: string; read: boolean; created_at: string; action_link: string; }[]' to type 'Notification[]' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+  Property 'timestamp' is missing in type '{ id: string; user_id: string; type: string; title: string; message: string; read: boolean; created_at: string; action_link: string; }' but required in type 'Notification'.
+
+  [90m22 |[0m   persist(
+  [90m23 |[0m     (set) => ({
+[31m[1m>[0m [90m24 |[0m       notifications: mockNotifications [36mas[0m [33mNotification[0m[],
+  [90m   |[0m                      [31m[1m^[0m
+  [90m25 |[0m       addNotification: (userId, [36mtype[0m, message) => set((state) => ({
+  [90m26 |[0m          notifications: [{
+  [90m27 |[0m              id: [32m`NOT-[0m${[33mMath[0m.floor([33mMath[0m.random() * [35m10000[0m)[32m}`[0m,
+Next.js build worker exited with code: 1 and signal: null
+npm notice
+npm notice New major version of npm available! 10.8.3 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice

@@ -1,0 +1,1607 @@
+{
+  "fcc_dummy_data": {
+
+    "users": [
+      {
+        "id": "u001",
+        "name": "Dr. James Mwangi",
+        "role": "CHIEF_INSPECTOR",
+        "email": "ci@fcc.go.tz",
+        "password": "CI@2026",
+        "portal": "internal",
+        "avatar_initials": "JM",
+        "department": "Anti-Counterfeits Division",
+        "employee_id": "FCC-EMP-0001",
+        "phone": "+255 26 2329086",
+        "joined_date": "2019-03-01",
+        "status": "ACTIVE",
+        "last_login": "2026-04-19T08:15:00Z"
+      },
+      {
+        "id": "u002",
+        "name": "Fatuma Salehe",
+        "role": "DAC",
+        "email": "dac@fcc.go.tz",
+        "password": "DAC@2026",
+        "portal": "internal",
+        "avatar_initials": "FS",
+        "department": "Anti-Counterfeits Division",
+        "employee_id": "FCC-EMP-0002",
+        "phone": "+255 26 2329087",
+        "joined_date": "2020-07-15",
+        "status": "ACTIVE",
+        "last_login": "2026-04-19T07:50:00Z"
+      },
+      {
+        "id": "u003",
+        "name": "Bernard Okello",
+        "role": "ACEM",
+        "email": "acem@fcc.go.tz",
+        "password": "ACEM@2026",
+        "portal": "internal",
+        "avatar_initials": "BO",
+        "department": "Anti-Counterfeit Enforcement Section",
+        "employee_id": "FCC-EMP-0003",
+        "phone": "+255 26 2329088",
+        "joined_date": "2021-01-10",
+        "status": "ACTIVE",
+        "last_login": "2026-04-19T09:02:00Z"
+      },
+      {
+        "id": "u004",
+        "name": "Grace Nyamwezi",
+        "role": "TRO",
+        "email": "tro@fcc.go.tz",
+        "password": "TRO@2026",
+        "portal": "internal",
+        "avatar_initials": "GN",
+        "department": "Trademark Recordation Officers",
+        "employee_id": "FCC-EMP-0010",
+        "phone": "+255 26 2329089",
+        "joined_date": "2022-04-18",
+        "status": "ACTIVE",
+        "last_login": "2026-04-19T09:30:00Z",
+        "appointment_letter": "FCC-TRO-APPT-2022-010",
+        "appointed_by": "u001",
+        "term_start": "2022-04-18",
+        "term_end": null
+      },
+      {
+        "id": "u005",
+        "name": "Hamisi Juma",
+        "role": "ACSM",
+        "email": "acsm@fcc.go.tz",
+        "password": "ACSM@2026",
+        "portal": "internal",
+        "avatar_initials": "HJ",
+        "department": "Counterfeits Surveillance Section",
+        "employee_id": "FCC-EMP-0004",
+        "phone": "+255 26 2329090",
+        "joined_date": "2020-11-22",
+        "status": "ACTIVE",
+        "last_login": "2026-04-19T06:45:00Z"
+      },
+      {
+        "id": "u006",
+        "name": "Amina Rashid",
+        "role": "CSO",
+        "email": "cso@fcc.go.tz",
+        "password": "CSO@2026",
+        "portal": "internal",
+        "avatar_initials": "AR",
+        "department": "Counterfeits Surveillance Section",
+        "employee_id": "FCC-EMP-0015",
+        "phone": "+255 26 2329091",
+        "joined_date": "2023-02-01",
+        "status": "ACTIVE",
+        "last_login": "2026-04-19T05:30:00Z",
+        "current_port_assignment": "Dar es Salaam Port",
+        "rotation_start": "2026-04-01",
+        "rotation_end": "2026-06-30",
+        "field_allowance_status": "PAID"
+      },
+      {
+        "id": "u007",
+        "name": "Coca-Cola Kwanza East Africa Ltd",
+        "role": "TRADEMARK_OWNER",
+        "email": "legal@cocacola-ea.co.tz",
+        "password": "Owner@2026",
+        "portal": "external",
+        "avatar_initials": "CC",
+        "entity_type": "company",
+        "country_of_incorporation": "Tanzania",
+        "business_address": "Plot 1, Industrial Area, Dar es Salaam, Tanzania",
+        "phone": "+255 22 2860000",
+        "business_description": "Manufacturer and distributor of non-alcoholic carbonated and non-carbonated beverages",
+        "account_verified": true,
+        "joined_date": "2024-01-10",
+        "last_login": "2026-04-19T10:05:00Z"
+      },
+      {
+        "id": "u008",
+        "name": "Advocate Paul Kimaro",
+        "role": "AUTHORIZED_AGENT",
+        "email": "agent@kimalaw.co.tz",
+        "password": "Agent@2026",
+        "portal": "external",
+        "avatar_initials": "PK",
+        "entity_type": "individual",
+        "nationality": "Tanzanian",
+        "business_address": "Kimaro & Associates Advocates, 4th Floor Extelecoms House, Samora Avenue, Dar es Salaam",
+        "phone": "+255 754 123456",
+        "business_description": "Intellectual property law firm specializing in trademark, patents and copyright matters",
+        "account_verified": true,
+        "joined_date": "2024-03-22",
+        "last_login": "2026-04-18T14:20:00Z"
+      },
+      {
+        "id": "u009",
+        "name": "TanzaLog Freight Solutions Ltd",
+        "role": "CLEARING_FORWARDING_AGENT",
+        "email": "ops@tanzalog.co.tz",
+        "password": "CFA@2026",
+        "portal": "external",
+        "avatar_initials": "TL",
+        "entity_type": "company",
+        "country_of_incorporation": "Tanzania",
+        "business_address": "Port Area, Gate 7, Dar es Salaam Port, Tanzania",
+        "phone": "+255 22 2134567",
+        "business_description": "Licensed clearing and forwarding agents operating across all Tanzanian entry points",
+        "account_verified": true,
+        "joined_date": "2024-06-01",
+        "last_login": "2026-04-17T09:15:00Z",
+        "customs_license_no": "TRA-CFA-2021-00891"
+      },
+      {
+        "id": "u010",
+        "name": "Public User Demo",
+        "role": "PUBLIC",
+        "email": "public@demo.com",
+        "password": "Public@2026",
+        "portal": "external",
+        "avatar_initials": "PU",
+        "account_verified": true,
+        "joined_date": "2026-01-01"
+      }
+    ],
+
+    "trademarks": [
+      {
+        "id": "TM-2026-001",
+        "trademark_name": "COCA-COLA",
+        "trademark_name_swahili": null,
+        "owner_id": "u007",
+        "owner_name": "Coca-Cola Kwanza East Africa Ltd",
+        "agent_id": "u008",
+        "agent_name": "Advocate Paul Kimaro",
+        "status": "ACTIVE",
+        "classes": [
+          { "number": "32", "description": "Non-alcoholic beverages, beer, mineral waters, fruit juices and concentrates" },
+          { "number": "33", "description": "Alcoholic beverages (except beers), wines and spirits" }
+        ],
+        "registration_no": "TZ-BRE-2019-04521",
+        "recorded_date": "2024-01-15",
+        "expiry_date": "2029-01-15",
+        "certificate_no": "FCC-CERT-2024-001",
+        "manufacturer": {
+          "name": "The Coca-Cola Company",
+          "address": "One Coca-Cola Plaza, Atlanta, Georgia 30313, USA",
+          "country": "United States of America"
+        },
+        "goods_description": "Non-alcoholic carbonated soft drinks, energy drinks, water, juice beverages, and concentrates bearing the COCA-COLA trademark",
+        "trademark_images": [
+          { "url": "/mock-trademark-images/tm-001-logo.png", "type": "primary_logo" },
+          { "url": "/mock-trademark-images/tm-001-label.png", "type": "product_label" },
+          { "url": "/mock-trademark-images/tm-001-bottle.png", "type": "product_image" }
+        ],
+        "licensees": [
+          {
+            "name": "Coca-Cola Kwanza Ltd",
+            "address": "Industrial Area, Dar es Salaam, Tanzania",
+            "nature_of_use": "Manufacturing and distribution under license"
+          },
+          {
+            "name": "Bonite Bottlers Ltd",
+            "address": "Moshi, Kilimanjaro, Tanzania",
+            "nature_of_use": "Bottling and distribution under license"
+          }
+        ],
+        "affiliated_companies": [
+          {
+            "name": "Coca-Cola Beverages Africa",
+            "relationship": "Parent company — common ownership",
+            "country": "South Africa"
+          }
+        ],
+        "poa_document": "POA-2024-001.pdf",
+        "brela_verified": true,
+        "brela_verification_date": "2024-01-12",
+        "days_to_expiry": 1001,
+        "register_entry_date": "2024-01-15",
+        "entered_by": "u004"
+      },
+      {
+        "id": "TM-2026-002",
+        "trademark_name": "SAFARI LAGER",
+        "owner_id": "u007",
+        "owner_name": "Tanzania Breweries Ltd",
+        "agent_id": null,
+        "status": "EXPIRING_SOON",
+        "classes": [
+          { "number": "32", "description": "Beers, malt-based beverages, non-alcoholic beverages" }
+        ],
+        "registration_no": "TZ-BRE-2018-03210",
+        "recorded_date": "2023-06-10",
+        "expiry_date": "2026-06-10",
+        "certificate_no": "FCC-CERT-2023-045",
+        "manufacturer": {
+          "name": "Tanzania Breweries Limited",
+          "address": "Plot 3, Industrial Area, Dar es Salaam, Tanzania",
+          "country": "Tanzania"
+        },
+        "goods_description": "Beer, malt beverages, lager beer sold under the SAFARI brand",
+        "trademark_images": [
+          { "url": "/mock-trademark-images/tm-002-logo.png", "type": "primary_logo" }
+        ],
+        "licensees": [],
+        "affiliated_companies": [
+          {
+            "name": "SABMiller plc",
+            "relationship": "Parent company",
+            "country": "United Kingdom"
+          }
+        ],
+        "poa_document": null,
+        "brela_verified": true,
+        "brela_verification_date": "2023-06-07",
+        "days_to_expiry": 52,
+        "expiry_alert_sent": true,
+        "expiry_alert_sent_date": "2026-03-11",
+        "register_entry_date": "2023-06-10",
+        "entered_by": "u004"
+      },
+      {
+        "id": "TM-2026-003",
+        "trademark_name": "AZAM",
+        "owner_id": "u007",
+        "owner_name": "Said Salim Bakhresa & Co Ltd",
+        "agent_id": "u008",
+        "agent_name": "Advocate Paul Kimaro",
+        "status": "ACTIVE",
+        "classes": [
+          { "number": "29", "description": "Meat, fish, poultry and game; meat extracts; preserved, frozen, dried and cooked fruits and vegetables" },
+          { "number": "30", "description": "Coffee, tea, cocoa and artificial coffee; rice, pasta and noodles; bread, pastry and confectionery" },
+          { "number": "32", "description": "Beers; mineral and aerated waters; non-alcoholic beverages; fruit drinks and juices" }
+        ],
+        "registration_no": "TZ-BRE-2020-07891",
+        "recorded_date": "2024-09-01",
+        "expiry_date": "2027-09-01",
+        "certificate_no": "FCC-CERT-2024-112",
+        "manufacturer": {
+          "name": "Bakhresa Food Products Ltd",
+          "address": "Bakhresa Complex, Msimbazi, Dar es Salaam, Tanzania",
+          "country": "Tanzania"
+        },
+        "goods_description": "Food products including bread, biscuits, snacks, ice cream, juices, and non-alcoholic beverages under the AZAM brand",
+        "trademark_images": [
+          { "url": "/mock-trademark-images/tm-003-logo.png", "type": "primary_logo" },
+          { "url": "/mock-trademark-images/tm-003-product.png", "type": "product_image" }
+        ],
+        "licensees": [
+          {
+            "name": "Said Salim Bakhresa & Co Ltd",
+            "address": "Bakhresa Complex, Dar es Salaam",
+            "nature_of_use": "Authorized manufacturing and distribution"
+          }
+        ],
+        "affiliated_companies": [],
+        "poa_document": "POA-2024-112.pdf",
+        "brela_verified": true,
+        "brela_verification_date": "2024-08-28",
+        "days_to_expiry": 500,
+        "register_entry_date": "2024-09-01",
+        "entered_by": "u004"
+      },
+      {
+        "id": "TM-2026-004",
+        "trademark_name": "NOKIA",
+        "owner_id": "u008",
+        "owner_name": "HMD Global Oy (via Advocate Paul Kimaro)",
+        "agent_id": "u008",
+        "agent_name": "Advocate Paul Kimaro",
+        "status": "UNDER_REVIEW",
+        "classes": [
+          { "number": "9", "description": "Mobile phones, smartphones, tablets, telecommunications equipment and accessories" }
+        ],
+        "registration_no": "TZ-BRE-2023-11200",
+        "recorded_date": null,
+        "expiry_date": null,
+        "certificate_no": null,
+        "manufacturer": {
+          "name": "HMD Global Oy",
+          "address": "Karaportti 8, 02610 Espoo, Helsinki, Finland",
+          "country": "Finland"
+        },
+        "goods_description": "Mobile handsets, feature phones, smartphones, and related accessories bearing the NOKIA trademark",
+        "trademark_images": [],
+        "licensees": [],
+        "affiliated_companies": [
+          {
+            "name": "Nokia Corporation",
+            "relationship": "Licensor of NOKIA brand",
+            "country": "Finland"
+          }
+        ],
+        "poa_document": "POA-2026-041.pdf",
+        "brela_verified": false,
+        "days_to_expiry": null,
+        "register_entry_date": null,
+        "entered_by": null
+      },
+      {
+        "id": "TM-2026-005",
+        "trademark_name": "SAMSUNG",
+        "owner_id": "u007",
+        "owner_name": "Samsung Electronics Co. Ltd (via Coca-Cola Kwanza — Demo)",
+        "agent_id": null,
+        "status": "ACTIVE",
+        "classes": [
+          { "number": "9", "description": "Consumer electronics, mobile phones, televisions, home appliances" },
+          { "number": "35", "description": "Advertising and business management services" }
+        ],
+        "registration_no": "TZ-BRE-2022-09901",
+        "recorded_date": "2026-03-20",
+        "expiry_date": "2029-03-20",
+        "certificate_no": "FCC-CERT-2026-035",
+        "manufacturer": {
+          "name": "Samsung Electronics Co. Ltd",
+          "address": "129, Samsung-ro, Yeongtong-gu, Suwon-si, Gyeonggi-do, Korea",
+          "country": "Republic of Korea"
+        },
+        "goods_description": "Consumer electronics including mobile phones, televisions, refrigerators, washing machines and related goods",
+        "trademark_images": [
+          { "url": "/mock-trademark-images/tm-005-logo.png", "type": "primary_logo" }
+        ],
+        "licensees": [],
+        "affiliated_companies": [
+          {
+            "name": "Samsung East Africa Ltd",
+            "relationship": "Regional distributor",
+            "country": "Kenya"
+          }
+        ],
+        "poa_document": null,
+        "brela_verified": true,
+        "brela_verification_date": "2026-03-18",
+        "days_to_expiry": 1065,
+        "register_entry_date": "2026-03-20",
+        "entered_by": "u004"
+      },
+      {
+        "id": "TM-2026-006",
+        "trademark_name": "PHILIPS",
+        "owner_id": "u008",
+        "owner_name": "Koninklijke Philips N.V. (via Advocate Paul Kimaro)",
+        "agent_id": "u008",
+        "status": "REQUIRES_RECTIFICATION",
+        "classes": [
+          { "number": "9", "description": "Electrical and electronic equipment, lighting equipment, healthcare equipment" },
+          { "number": "11", "description": "Apparatus for lighting, heating, steam generating, cooking, refrigerating, drying, ventilating" }
+        ],
+        "registration_no": "TZ-BRE-2021-05541",
+        "recorded_date": null,
+        "expiry_date": null,
+        "certificate_no": null,
+        "manufacturer": {
+          "name": "Koninklijke Philips N.V.",
+          "address": "Amstelplein 2, 1096 BC Amsterdam, Netherlands",
+          "country": "Netherlands"
+        },
+        "goods_description": "Lighting products, healthcare equipment, consumer electronics and electrical appliances",
+        "trademark_images": [],
+        "licensees": [],
+        "affiliated_companies": [],
+        "poa_document": "POA-2026-028.pdf",
+        "brela_verified": false,
+        "days_to_expiry": null,
+        "register_entry_date": null,
+        "entered_by": null,
+        "rectification_note": "Missing certified copy of trademark registration certificate from BRELA. Applicant notified on 2026-03-01. Deadline: 2026-03-06."
+      },
+      {
+        "id": "TM-2026-007",
+        "trademark_name": "KILIMO FRESH",
+        "owner_id": "u007",
+        "owner_name": "Kilimo Fresh Agro Products Ltd",
+        "agent_id": null,
+        "status": "EXPIRED",
+        "classes": [
+          { "number": "29", "description": "Fresh and processed fruits, vegetables and food products" },
+          { "number": "31", "description": "Fresh fruits and vegetables, live animals, plants" }
+        ],
+        "registration_no": "TZ-BRE-2016-01123",
+        "recorded_date": "2021-01-10",
+        "expiry_date": "2026-01-10",
+        "certificate_no": "FCC-CERT-2021-007",
+        "manufacturer": {
+          "name": "Kilimo Fresh Agro Products Ltd",
+          "address": "Arusha, Tanzania",
+          "country": "Tanzania"
+        },
+        "goods_description": "Fresh and packaged fruits and vegetables distributed under the KILIMO FRESH brand",
+        "trademark_images": [],
+        "licensees": [],
+        "affiliated_companies": [],
+        "poa_document": null,
+        "brela_verified": true,
+        "days_to_expiry": -99,
+        "expiry_alert_sent": true,
+        "register_entry_date": "2021-01-10",
+        "entered_by": "u004"
+      }
+    ],
+
+    "applications": [
+      {
+        "id": "APP-2026-0041",
+        "application_type": "NEW_RECORDATION",
+        "trademark_name": "NOKIA",
+        "trademark_id": "TM-2026-004",
+        "applicant_id": "u008",
+        "applicant_name": "Advocate Paul Kimaro",
+        "applicant_type": "AGENT",
+        "form_type": "FCC_FORM_1",
+        "trademark_count": 1,
+        "status": "UNDER_REVIEW",
+        "submitted_date": "2026-04-10",
+        "days_elapsed": 9,
+        "days_remaining": 12,
+        "gepg_control_no": "GEPG-2026-88421",
+        "payment_status": "PAID",
+        "payment_amount_tzs": 200000,
+        "payment_date": "2026-04-10",
+        "payment_receipt_no": "REC-2026-88421",
+        "assigned_acem_id": "u003",
+        "assigned_acem_name": "Bernard Okello",
+        "assigned_tro_id": "u004",
+        "assigned_tro_name": "Grace Nyamwezi",
+        "poa_uploaded": true,
+        "poa_filename": "POA-Nokia-Kimaro-2026.pdf",
+        "documents": [
+          { "type": "TRADEMARK_REGISTRATION_CERTIFICATE", "filename": "Nokia-BRE-Cert-2023-11200.pdf", "verified": true },
+          { "type": "POA", "filename": "POA-Nokia-Kimaro-2026.pdf", "verified": true },
+          { "type": "TRADEMARK_IMAGES", "filename": "Nokia-logos-HQ.zip", "verified": false },
+          { "type": "EVIDENCE_OF_TITLE", "filename": "Nokia-License-Agreement-2023.pdf", "verified": true }
+        ],
+        "trademark_classes": ["9"],
+        "manufacturer_name": "HMD Global Oy",
+        "manufacturer_country": "Finland",
+        "goods_description": "Mobile handsets, smartphones, feature phones and accessories",
+        "tro_recommendation": null,
+        "tro_recommendation_date": null,
+        "tro_notes": "BRELA verification pending. High-resolution trademark images not yet confirmed authentic.",
+        "acem_decision": null,
+        "acem_decision_date": null,
+        "dac_forwarded_date": null,
+        "ci_decision": null,
+        "ci_decision_date": null,
+        "rejection_reason": null,
+        "brela_verified": false,
+        "audit_trail": [
+          { "timestamp": "2026-04-10T09:15:00Z", "user": "u008", "user_name": "Advocate Paul Kimaro", "action": "APPLICATION_SUBMITTED", "note": "Application submitted with all required documents and GePG payment confirmed." },
+          { "timestamp": "2026-04-10T09:15:05Z", "user": "SYSTEM", "user_name": "System", "action": "AUTO_ASSIGNED_ACEM", "note": "Application auto-assigned to ACEM Bernard Okello." },
+          { "timestamp": "2026-04-11T10:30:00Z", "user": "u003", "user_name": "Bernard Okello (ACEM)", "action": "ASSIGNED_TO_TRO", "note": "Application assigned to TRO Grace Nyamwezi for preliminary assessment." },
+          { "timestamp": "2026-04-12T14:00:00Z", "user": "u004", "user_name": "Grace Nyamwezi (TRO)", "action": "ASSESSMENT_STARTED", "note": "Preliminary assessment commenced. BRELA verification initiated." }
+        ]
+      },
+      {
+        "id": "APP-2026-0035",
+        "application_type": "NEW_RECORDATION",
+        "trademark_name": "SAMSUNG",
+        "trademark_id": "TM-2026-005",
+        "applicant_id": "u007",
+        "applicant_name": "Coca-Cola Kwanza East Africa Ltd",
+        "applicant_type": "TRADEMARK_OWNER",
+        "form_type": "FCC_FORM_1",
+        "trademark_count": 1,
+        "status": "APPROVED",
+        "submitted_date": "2026-03-01",
+        "days_elapsed": 19,
+        "days_remaining": 0,
+        "gepg_control_no": "GEPG-2026-77109",
+        "payment_status": "PAID",
+        "payment_amount_tzs": 200000,
+        "payment_date": "2026-03-01",
+        "payment_receipt_no": "REC-2026-77109",
+        "assigned_acem_id": "u003",
+        "assigned_acem_name": "Bernard Okello",
+        "assigned_tro_id": "u004",
+        "assigned_tro_name": "Grace Nyamwezi",
+        "poa_uploaded": false,
+        "documents": [
+          { "type": "TRADEMARK_REGISTRATION_CERTIFICATE", "filename": "Samsung-BRE-2022-09901.pdf", "verified": true },
+          { "type": "TRADEMARK_IMAGES", "filename": "Samsung-brand-assets.zip", "verified": true },
+          { "type": "EVIDENCE_OF_TITLE", "filename": "Samsung-Regional-Auth-2024.pdf", "verified": true }
+        ],
+        "trademark_classes": ["9", "35"],
+        "manufacturer_name": "Samsung Electronics Co. Ltd",
+        "manufacturer_country": "Republic of Korea",
+        "goods_description": "Consumer electronics including mobile phones, TVs, refrigerators and washing machines",
+        "tro_recommendation": "APPROVE",
+        "tro_recommendation_date": "2026-03-12",
+        "tro_notes": "All documents verified. BRELA confirmed trademark registration TZ-BRE-2022-09901 is valid and current. Trademark images match registered mark. No discrepancies found.",
+        "acem_decision": "APPROVE",
+        "acem_decision_date": "2026-03-14",
+        "dac_forwarded_date": "2026-03-15",
+        "ci_decision": "APPROVE",
+        "ci_decision_date": "2026-03-20",
+        "rejection_reason": null,
+        "brela_verified": true,
+        "brela_verification_ref": "BRELA-VER-2026-0035",
+        "certificate_issued": "FCC-CERT-2026-035",
+        "certificate_issued_date": "2026-03-20",
+        "audit_trail": [
+          { "timestamp": "2026-03-01T10:00:00Z", "user": "u007", "user_name": "Coca-Cola Kwanza East Africa Ltd", "action": "APPLICATION_SUBMITTED", "note": "New recordation application submitted. Payment confirmed." },
+          { "timestamp": "2026-03-01T10:00:05Z", "user": "SYSTEM", "user_name": "System", "action": "AUTO_ASSIGNED_ACEM", "note": "Auto-assigned to ACEM." },
+          { "timestamp": "2026-03-02T08:30:00Z", "user": "u002", "user_name": "Fatuma Salehe (DAC)", "action": "DAC_REVIEWED", "note": "Application previewed and ACEM directed to proceed." },
+          { "timestamp": "2026-03-03T09:00:00Z", "user": "u003", "user_name": "Bernard Okello (ACEM)", "action": "ASSIGNED_TO_TRO", "note": "Assigned to TRO Grace Nyamwezi." },
+          { "timestamp": "2026-03-12T16:00:00Z", "user": "u004", "user_name": "Grace Nyamwezi (TRO)", "action": "TRO_RECOMMENDED_APPROVAL", "note": "All documents valid. BRELA confirmed. Recommending approval." },
+          { "timestamp": "2026-03-14T11:00:00Z", "user": "u003", "user_name": "Bernard Okello (ACEM)", "action": "ACEM_APPROVED", "note": "ACEM approves recordation." },
+          { "timestamp": "2026-03-15T09:30:00Z", "user": "u002", "user_name": "Fatuma Salehe (DAC)", "action": "DAC_FORWARDED_TO_CI", "note": "Forwarded recommendation to CI for final decision." },
+          { "timestamp": "2026-03-20T10:00:00Z", "user": "u001", "user_name": "Dr. James Mwangi (CI)", "action": "CI_APPROVED", "note": "Application approved. Certificate generated and Register updated." },
+          { "timestamp": "2026-03-20T10:00:05Z", "user": "SYSTEM", "user_name": "System", "action": "CERTIFICATE_GENERATED", "note": "Certificate FCC-CERT-2026-035 auto-generated and sent to applicant." },
+          { "timestamp": "2026-03-20T10:00:06Z", "user": "SYSTEM", "user_name": "System", "action": "REGISTER_UPDATED", "note": "Trademark TM-2026-005 migrated to Register." }
+        ]
+      },
+      {
+        "id": "APP-2026-0028",
+        "application_type": "NEW_RECORDATION",
+        "trademark_name": "PHILIPS",
+        "trademark_id": "TM-2026-006",
+        "applicant_id": "u008",
+        "applicant_name": "Advocate Paul Kimaro",
+        "applicant_type": "AGENT",
+        "form_type": "FCC_FORM_1",
+        "trademark_count": 1,
+        "status": "REQUIRES_RECTIFICATION",
+        "submitted_date": "2026-02-20",
+        "days_elapsed": 21,
+        "days_remaining": 0,
+        "gepg_control_no": "GEPG-2026-66543",
+        "payment_status": "PAID",
+        "payment_amount_tzs": 200000,
+        "payment_date": "2026-02-20",
+        "payment_receipt_no": "REC-2026-66543",
+        "assigned_acem_id": "u003",
+        "assigned_tro_id": "u004",
+        "poa_uploaded": true,
+        "documents": [
+          { "type": "POA", "filename": "POA-Philips-Kimaro-2026.pdf", "verified": true },
+          { "type": "TRADEMARK_IMAGES", "filename": "Philips-logos.zip", "verified": false },
+          { "type": "EVIDENCE_OF_TITLE", "filename": "Philips-License-Africa.pdf", "verified": false }
+        ],
+        "tro_recommendation": "RECTIFY",
+        "tro_recommendation_date": "2026-03-01",
+        "tro_notes": "Missing certified copy of BRELA trademark registration certificate. Evidence of title document is a scanned photocopy and does not meet the certification requirement. Applicant must resubmit certified originals.",
+        "acem_decision": null,
+        "ci_decision": null,
+        "rectification_deadline": "2026-03-06",
+        "rectification_submitted": false,
+        "rejection_reason": null,
+        "audit_trail": [
+          { "timestamp": "2026-02-20T11:00:00Z", "user": "u008", "user_name": "Advocate Paul Kimaro", "action": "APPLICATION_SUBMITTED", "note": "Application submitted with partial documents." },
+          { "timestamp": "2026-02-20T11:00:05Z", "user": "SYSTEM", "user_name": "System", "action": "AUTO_ASSIGNED_ACEM", "note": "Auto-assigned to ACEM." },
+          { "timestamp": "2026-02-22T09:00:00Z", "user": "u003", "user_name": "Bernard Okello (ACEM)", "action": "ASSIGNED_TO_TRO", "note": "Assigned to TRO for assessment." },
+          { "timestamp": "2026-03-01T15:00:00Z", "user": "u004", "user_name": "Grace Nyamwezi (TRO)", "action": "RECTIFICATION_REQUESTED", "note": "Documents incomplete. Applicant required to resubmit certified registration certificate within 5 working days." },
+          { "timestamp": "2026-03-01T15:00:30Z", "user": "SYSTEM", "user_name": "System", "action": "NOTIFICATION_SENT", "note": "Rectification request email sent to agent@kimalaw.co.tz" }
+        ]
+      },
+      {
+        "id": "APP-2026-0020",
+        "application_type": "NEW_RECORDATION",
+        "trademark_name": "TOTAL ENERGIES",
+        "trademark_id": null,
+        "applicant_id": "u007",
+        "applicant_name": "Coca-Cola Kwanza East Africa Ltd",
+        "applicant_type": "TRADEMARK_OWNER",
+        "form_type": "FCC_FORM_1",
+        "trademark_count": 2,
+        "status": "REJECTED",
+        "submitted_date": "2026-01-15",
+        "days_elapsed": 21,
+        "gepg_control_no": "GEPG-2026-55019",
+        "payment_status": "PAID",
+        "payment_amount_tzs": 400000,
+        "assigned_acem_id": "u003",
+        "assigned_tro_id": "u004",
+        "tro_recommendation": "REJECT",
+        "tro_recommendation_date": "2026-02-02",
+        "tro_notes": "BRELA verification shows the trademark registration certificate submitted (TZ-BRE-2020-08821) is in the name of TotalEnergies SE, France — not the applicant. Applicant has no legal standing to make this application. No Power of Attorney submitted.",
+        "acem_decision": "REJECT",
+        "acem_decision_date": "2026-02-03",
+        "ci_decision": "REJECT",
+        "ci_decision_date": "2026-02-05",
+        "rejection_reason": "Applicant does not hold title to the trademark. The registration TZ-BRE-2020-08821 is registered under TotalEnergies SE and no Power of Attorney was submitted to authorize this applicant.",
+        "audit_trail": [
+          { "timestamp": "2026-01-15T09:00:00Z", "user": "u007", "user_name": "Coca-Cola Kwanza East Africa Ltd", "action": "APPLICATION_SUBMITTED", "note": "Application submitted." },
+          { "timestamp": "2026-02-02T10:00:00Z", "user": "u004", "user_name": "Grace Nyamwezi (TRO)", "action": "TRO_RECOMMENDED_REJECTION", "note": "Applicant has no standing. BRELA confirms trademark not in applicant name." },
+          { "timestamp": "2026-02-05T11:00:00Z", "user": "u001", "user_name": "Dr. James Mwangi (CI)", "action": "CI_REJECTED", "note": "Application rejected. Notification sent to applicant with stated reasons." }
+        ]
+      },
+      {
+        "id": "APP-2026-0012",
+        "application_type": "RENEWAL",
+        "trademark_name": "AZAM",
+        "trademark_id": "TM-2026-003",
+        "applicant_id": "u008",
+        "applicant_name": "Advocate Paul Kimaro",
+        "applicant_type": "AGENT",
+        "form_type": "RENEWAL_FORM",
+        "status": "APPROVED",
+        "submitted_date": "2026-01-05",
+        "gepg_control_no": "GEPG-2026-44008",
+        "payment_status": "PAID",
+        "payment_amount_tzs": 50000,
+        "documents": [
+          { "type": "RENEWAL_CERTIFICATE", "filename": "AZAM-BRE-Renewal-2026.pdf", "verified": true }
+        ],
+        "tro_recommendation": "APPROVE",
+        "acem_decision": "APPROVE",
+        "ci_decision": "APPROVE",
+        "certificate_issued": "FCC-RENEW-2026-012",
+        "certificate_issued_date": "2026-01-20",
+        "audit_trail": [
+          { "timestamp": "2026-01-05T10:00:00Z", "user": "u008", "user_name": "Advocate Paul Kimaro", "action": "RENEWAL_SUBMITTED", "note": "Renewal application with certified BRE certificate." },
+          { "timestamp": "2026-01-20T11:00:00Z", "user": "u001", "user_name": "Dr. James Mwangi (CI)", "action": "CI_APPROVED", "note": "Renewal approved. Expiry updated to 2027-09-01." }
+        ]
+      }
+    ],
+
+    "maintenance_applications": [
+      {
+        "id": "MAINT-2026-0008",
+        "type": "ALTERATION_AMENDMENT",
+        "trademark_id": "TM-2026-001",
+        "trademark_name": "COCA-COLA",
+        "applicant_id": "u007",
+        "fields_amended": [
+          { "field": "manufacturer_address", "old_value": "One Coca-Cola Plaza, Atlanta, USA", "new_value": "One Coca-Cola Plaza, Atlanta, Georgia 30313, USA" },
+          { "field": "licensees", "old_value": "2 licensees", "new_value": "Added: Kilimanjaro Beverages Ltd, Moshi, Tanzania" }
+        ],
+        "status": "APPROVED",
+        "submitted_date": "2026-03-25",
+        "payment_required": false,
+        "acem_decision": "APPROVE",
+        "acem_decision_date": "2026-03-29",
+        "confirmation_email_sent": true,
+        "audit_trail": [
+          { "timestamp": "2026-03-25T09:00:00Z", "user": "u007", "user_name": "Coca-Cola Kwanza", "action": "AMENDMENT_SUBMITTED", "note": "Minor address amendment and new licensee addition." },
+          { "timestamp": "2026-03-29T11:00:00Z", "user": "u003", "user_name": "Bernard Okello (ACEM)", "action": "ACEM_APPROVED", "note": "Non-ownership amendment approved directly. Register updated." }
+        ]
+      },
+      {
+        "id": "MAINT-2026-0005",
+        "type": "CHANGE_OF_OWNERSHIP",
+        "trademark_id": "TM-2026-007",
+        "trademark_name": "KILIMO FRESH",
+        "applicant_id": "u007",
+        "form_type": "FCC_FORM_2",
+        "old_owner": "Kilimo Fresh Agro Products Ltd",
+        "new_owner": "Kilimo Holdings Tanzania Ltd",
+        "new_owner_address": "Arusha City, Kilimanjaro Region, Tanzania",
+        "status": "UNDER_REVIEW",
+        "submitted_date": "2026-04-05",
+        "payment_amount_tzs": 150000,
+        "gepg_control_no": "GEPG-2026-91200",
+        "payment_status": "PAID",
+        "documents": [
+          { "type": "UPDATED_REGISTRATION_CERTIFICATE", "filename": "KilimoFresh-OwnerChange-BRE-2026.pdf", "verified": false },
+          { "type": "ASSIGNMENT_DEED", "filename": "Assignment-KilimoFresh-2026.pdf", "verified": false }
+        ],
+        "tro_recommendation": null,
+        "brela_verified": false,
+        "audit_trail": [
+          { "timestamp": "2026-04-05T10:00:00Z", "user": "u007", "user_name": "Coca-Cola Kwanza East Africa Ltd", "action": "OWNERSHIP_CHANGE_SUBMITTED", "note": "Application submitted with Form FCC 2 and supporting documents." }
+        ]
+      },
+      {
+        "id": "MAINT-2026-0003",
+        "type": "CHANGE_OF_NAME",
+        "trademark_id": "TM-2026-003",
+        "trademark_name": "AZAM",
+        "applicant_id": "u008",
+        "old_name": "Said Salim Bakhresa & Co Ltd",
+        "new_name": "Bakhresa Food Products Ltd",
+        "status": "APPROVED",
+        "submitted_date": "2026-02-10",
+        "payment_amount_tzs": 100000,
+        "gepg_control_no": "GEPG-2026-33871",
+        "payment_status": "PAID",
+        "documents": [
+          { "type": "UPDATED_REGISTRATION_CERTIFICATE", "filename": "Bakhresa-NameChange-BRE-2026.pdf", "verified": true }
+        ],
+        "tro_recommendation": "APPROVE",
+        "brela_verified": true,
+        "acem_decision": "APPROVE",
+        "ci_decision": "APPROVE",
+        "new_certificate_issued": "FCC-NAME-2026-003",
+        "audit_trail": [
+          { "timestamp": "2026-02-10T10:00:00Z", "user": "u008", "user_name": "Advocate Paul Kimaro", "action": "NAME_CHANGE_SUBMITTED", "note": "Company name changed per BRELA certificate." },
+          { "timestamp": "2026-02-20T09:00:00Z", "user": "u001", "user_name": "Dr. James Mwangi (CI)", "action": "CI_APPROVED", "note": "Name change approved. New certificate issued." }
+        ]
+      }
+    ],
+
+    "agents": [
+      {
+        "id": "AGT-2024-001",
+        "owner_id": "u007",
+        "owner_name": "Coca-Cola Kwanza East Africa Ltd",
+        "agent_id": "u008",
+        "agent_name": "Advocate Paul Kimaro",
+        "agent_firm": "Kimaro & Associates Advocates",
+        "agent_email": "agent@kimalaw.co.tz",
+        "agent_phone": "+255 754 123456",
+        "poa_filename": "POA-CocaCola-Kimaro-2024.pdf",
+        "poa_date": "2024-03-01",
+        "poa_expiry": "2027-03-01",
+        "trademarks_covered": ["TM-2026-001", "TM-2026-003"],
+        "status": "ACTIVE",
+        "appointed_date": "2024-03-05",
+        "revoked_date": null,
+        "confirmation_letter": "FCC-AGT-CONF-2024-001",
+        "entered_by": "u003"
+      },
+      {
+        "id": "AGT-2024-002",
+        "owner_id": "u008",
+        "owner_name": "HMD Global Oy",
+        "agent_id": "u008",
+        "agent_name": "Advocate Paul Kimaro",
+        "agent_firm": "Kimaro & Associates Advocates",
+        "poa_filename": "POA-Nokia-Kimaro-2026.pdf",
+        "poa_date": "2026-01-15",
+        "poa_expiry": "2029-01-15",
+        "trademarks_covered": ["TM-2026-004"],
+        "status": "ACTIVE",
+        "appointed_date": "2026-02-01",
+        "revoked_date": null,
+        "entered_by": "u003"
+      }
+    ],
+
+    "inspections": [
+      {
+        "id": "INS-2026-0091",
+        "tanoga_ref": "TANOGA-TZ-2026-44512",
+        "tanesw_booking_ref": "TANSAD-2026-881234",
+        "port": "Dar es Salaam Port",
+        "port_type": "SEA_PORT",
+        "importer_name": "Kanda General Imports Ltd",
+        "importer_tin": "100-456-789",
+        "cfa_id": "u009",
+        "cfa_name": "TanzaLog Freight Solutions Ltd",
+        "cfa_license_no": "TRA-CFA-2021-00891",
+        "hs_codes": ["2202.10", "2202.90"],
+        "goods_description": "Carbonated soft drinks and flavoured beverages in 500ml PET bottles — 2000 cartons",
+        "quantity": "2000 cartons / 48,000 bottles",
+        "declared_value_tzs": 28800000,
+        "country_of_origin": "China",
+        "bill_of_lading": "BL-2026-CNDAR-88123",
+        "container_no": "TGHU8821340",
+        "seal_no": "SL-TZ-2026-44512",
+        "gross_weight_kg": 26400,
+        "vessel_name": "MSC BEATRICE",
+        "voyage_no": "VY2026-041",
+        "arrival_date": "2026-04-16",
+        "assigned_cso_id": "u006",
+        "assigned_cso_name": "Amina Rashid",
+        "assigned_acsm_id": "u005",
+        "assigned_acsm_name": "Hamisi Juma",
+        "status": "FLAGGED",
+        "outcome": null,
+        "flagged_date": "2026-04-17",
+        "flagged_reason": "HS codes 2202.10 and 2202.90 fall under CI mandate. Goods cannot be released until FCC clears.",
+        "inspection_date": null,
+        "trademark_match": null,
+        "checklist": {
+          "documents_examined": false,
+          "country_of_origin_verified": false,
+          "trademark_on_goods_matches": false,
+          "packaging_consistent": false,
+          "quantity_matches_manifest": false
+        },
+        "seizure_report": null
+      },
+      {
+        "id": "INS-2026-0087",
+        "tanoga_ref": "TANOGA-TZ-2026-44100",
+        "tanesw_booking_ref": "TANSAD-2026-880912",
+        "port": "Julius Nyerere International Airport",
+        "port_type": "AIRPORT",
+        "importer_name": "Kanda Imports and Distribution Ltd",
+        "importer_tin": "100-321-654",
+        "cfa_id": "u009",
+        "cfa_name": "TanzaLog Freight Solutions Ltd",
+        "hs_codes": ["8517.12"],
+        "goods_description": "Mobile handsets — feature phones in retail packaging bearing NOKIA logo — 500 units",
+        "quantity": "500 units / 50 cartons",
+        "declared_value_tzs": 45000000,
+        "country_of_origin": "China",
+        "bill_of_lading": "AWB-2026-CNDAR-77021",
+        "container_no": "N/A (Air cargo)",
+        "gross_weight_kg": 750,
+        "airline": "Ethiopian Airlines",
+        "flight_no": "ET-862",
+        "arrival_date": "2026-04-14",
+        "assigned_cso_id": "u006",
+        "assigned_cso_name": "Amina Rashid",
+        "assigned_acsm_id": "u005",
+        "status": "DETAINED",
+        "outcome": "COUNTERFEIT_SUSPECTED",
+        "flagged_date": "2026-04-14",
+        "inspection_date": "2026-04-15",
+        "inspection_time": "2026-04-15T11:30:00Z",
+        "trademark_match": {
+          "trademark_id": "TM-2026-004",
+          "trademark_name": "NOKIA",
+          "status": "UNDER_REVIEW",
+          "note": "Trademark NOKIA (TM-2026-004) is currently UNDER_REVIEW — not yet fully recorded. Goods detained pending resolution."
+        },
+        "checklist": {
+          "documents_examined": true,
+          "country_of_origin_verified": true,
+          "trademark_on_goods_matches": false,
+          "packaging_consistent": false,
+          "quantity_matches_manifest": true
+        },
+        "cso_inspection_notes": "Physical inspection reveals Nokia branding on packaging but internal components do not match Nokia specifications. Model numbers on packaging differ from IMEI data. Suspected counterfeit/infringing goods.",
+        "seizure_report": {
+          "id": "SEZ-2026-0012",
+          "created_date": "2026-04-15",
+          "created_by": "u006",
+          "goods_value_tzs": 45000000,
+          "quantity": 500,
+          "goods_description": "500 mobile handsets bearing NOKIA trademark — suspected counterfeit",
+          "evidence_collected": ["Photos of packaging and IMEI labels", "Sample 3 units collected for laboratory testing"],
+          "notice_of_seizure_issued": true,
+          "notice_served_to": "TanzaLog Freight Solutions Ltd",
+          "notice_date": "2026-04-15",
+          "cfa_signed": false,
+          "cfa_refused": true,
+          "brand_owner_notified": true,
+          "brand_owner_notified_date": "2026-04-16",
+          "brand_owner_confirmation": null,
+          "brand_owner_confirmation_deadline": "2026-04-19",
+          "submitted_to_acsm": true,
+          "submitted_to_acsm_date": "2026-04-15",
+          "acsm_forwarded_to_dac": true,
+          "dac_directives": "Proceed with compoundment assessment. Assign ACEO.",
+          "fine_calculated": null,
+          "compoundment_order_no": null
+        }
+      },
+      {
+        "id": "INS-2026-0080",
+        "tanoga_ref": "TANOGA-TZ-2026-43800",
+        "tanesw_booking_ref": "TANSAD-2026-879100",
+        "port": "Holili One Stop Border Post",
+        "port_type": "OSBP",
+        "importer_name": "Mtibwa Agro Traders Ltd",
+        "importer_tin": "100-111-222",
+        "cfa_id": "u009",
+        "cfa_name": "TanzaLog Freight Solutions Ltd",
+        "hs_codes": ["1701.99"],
+        "goods_description": "Packaged refined sugar — 25kg bags — 500 bags bearing AZAM brand",
+        "quantity": "500 bags / 12,500 kg",
+        "declared_value_tzs": 14750000,
+        "country_of_origin": "Brazil",
+        "container_no": "TRKU3821004",
+        "truck_no": "T 889 DAR",
+        "arrival_date": "2026-04-10",
+        "assigned_cso_id": "u006",
+        "assigned_cso_name": "Amina Rashid",
+        "assigned_acsm_id": "u005",
+        "status": "CLEARED",
+        "outcome": "CLEARED",
+        "flagged_date": "2026-04-10",
+        "inspection_date": "2026-04-11",
+        "trademark_match": {
+          "trademark_id": "TM-2026-003",
+          "trademark_name": "AZAM",
+          "status": "ACTIVE",
+          "note": "Trademark AZAM matches recorded trademark TM-2026-003. Valid until 2027-09-01."
+        },
+        "checklist": {
+          "documents_examined": true,
+          "country_of_origin_verified": true,
+          "trademark_on_goods_matches": true,
+          "packaging_consistent": true,
+          "quantity_matches_manifest": true
+        },
+        "cso_inspection_notes": "All documentation verified. TANSAD matches goods. Trademark AZAM is validly recorded in FCC Register. Country of origin marking correct. Goods cleared.",
+        "clearance_approved_in_tanoga": true,
+        "clearance_date": "2026-04-11T15:30:00Z",
+        "seizure_report": null
+      },
+      {
+        "id": "INS-2026-0075",
+        "tanoga_ref": "TANOGA-TZ-2026-43200",
+        "tanesw_booking_ref": "TANSAD-2026-878001",
+        "port": "Tunduma One Stop Border Post",
+        "port_type": "OSBP",
+        "importer_name": "Samora Electronics Ltd",
+        "importer_tin": "100-654-321",
+        "cfa_id": "u009",
+        "hs_codes": ["8509.40", "8509.80"],
+        "goods_description": "Electric blenders and food processors bearing PHILIPS trademark — 200 units",
+        "quantity": "200 units",
+        "declared_value_tzs": 18000000,
+        "country_of_origin": "China",
+        "truck_no": "T 441 TUN",
+        "arrival_date": "2026-04-08",
+        "assigned_cso_id": "u006",
+        "status": "SEIZED",
+        "outcome": "CONFIRMED_COUNTERFEIT",
+        "flagged_date": "2026-04-08",
+        "inspection_date": "2026-04-09",
+        "trademark_match": {
+          "trademark_id": "TM-2026-006",
+          "trademark_name": "PHILIPS",
+          "status": "REQUIRES_RECTIFICATION",
+          "note": "Trademark PHILIPS application still under rectification. Trademark not yet recorded. Goods detained."
+        },
+        "checklist": {
+          "documents_examined": true,
+          "country_of_origin_verified": true,
+          "trademark_on_goods_matches": false,
+          "packaging_consistent": false,
+          "quantity_matches_manifest": false
+        },
+        "cso_inspection_notes": "PHILIPS trademark not in FCC Register. Goods suspected counterfeit. Voltage ratings inconsistent with genuine PHILIPS products. Packaging quality poor. Seizure initiated.",
+        "seizure_report": {
+          "id": "SEZ-2026-0009",
+          "goods_value_tzs": 18000000,
+          "quantity": 200,
+          "brand_owner_notified": true,
+          "brand_owner_confirmed": true,
+          "brand_owner_confirmation_date": "2026-04-12",
+          "brand_owner_statement": "The goods are confirmed counterfeit. Genuine Philips products of this model are not manufactured in China for this market.",
+          "fine_calculated": true,
+          "fine_breakdown": {
+            "goods_value_tzs": 18000000,
+            "import_taxes_tzs": 5400000,
+            "subtotal_tzs": 23400000,
+            "destruction_surcharge_50pct_tzs": 9000000,
+            "total_fine_tzs": 32400000
+          },
+          "compoundment_order_no": "COMP-2026-009",
+          "gepg_payment_control_no": "GEPG-2026-COMP-009",
+          "payment_status": "PAID",
+          "payment_date": "2026-04-16",
+          "offloading_letter_issued": true,
+          "offloading_date": "2026-04-17",
+          "warehouse_receipt_no": "WH-DAR-2026-0009",
+          "case_status": "RESOLVED"
+        }
+      }
+    ],
+
+    "enforcement_cases": [
+      {
+        "id": "ENF-2026-0009",
+        "seizure_report_id": "SEZ-2026-0009",
+        "inspection_id": "INS-2026-0075",
+        "trademark_name": "PHILIPS",
+        "importer": "Samora Electronics Ltd",
+        "port": "Tunduma OSBP",
+        "status": "RESOLVED",
+        "goods_description": "Counterfeit Philips electric blenders and food processors — 200 units",
+        "goods_value_tzs": 18000000,
+        "import_taxes_tzs": 5400000,
+        "destruction_surcharge_tzs": 9000000,
+        "total_fine_tzs": 32400000,
+        "compoundment_form_f_submitted": true,
+        "form_f_date": "2026-04-13",
+        "aceo_assigned": "u006",
+        "acem_review_date": "2026-04-14",
+        "dac_approval_date": "2026-04-15",
+        "compoundment_order": {
+          "order_no": "COMP-2026-009",
+          "issued_date": "2026-04-15",
+          "issued_by": "u003",
+          "fine_total_tzs": 32400000,
+          "gepg_control_no": "GEPG-2026-COMP-009",
+          "payment_deadline": "2026-04-18",
+          "offender": "Samora Electronics Ltd",
+          "offender_tin": "100-654-321"
+        },
+        "offloading_letter": {
+          "letter_ref": "FCC-OFFLOAD-2026-009",
+          "issued_date": "2026-04-17",
+          "issued_by": "u002",
+          "addressed_to": "Commissioner for Customs, Tanzania Revenue Authority",
+          "cc": ["Wharf Manager — Tunduma OSBP", "Samora Electronics Ltd", "TanzaLog Freight Solutions Ltd"],
+          "contents": "Following full payment of Compoundment Order COMP-2026-009, you are hereby directed to facilitate the offloading of 200 counterfeit Philips-branded electrical appliances (Container/Truck T 441 TUN) to the FCC Designated Counterfeit Goods Warehouse."
+        },
+        "warehouse_receipt": {
+          "receipt_no": "WH-DAR-2026-0009",
+          "date": "2026-04-17",
+          "warehouse": "FCC Counterfeit Goods Warehouse, Tunduma",
+          "goods_received": "200 units counterfeit Philips blenders/food processors",
+          "received_by_officer": "Amina Rashid (CSO u006)",
+          "warehouse_officer_signature": "Pending"
+        }
+      },
+      {
+        "id": "ENF-2026-0012",
+        "seizure_report_id": "SEZ-2026-0012",
+        "inspection_id": "INS-2026-0087",
+        "trademark_name": "NOKIA",
+        "importer": "Kanda Imports and Distribution Ltd",
+        "port": "Julius Nyerere International Airport",
+        "status": "PENDING_BRAND_CONFIRMATION",
+        "goods_description": "500 suspected counterfeit NOKIA mobile handsets",
+        "goods_value_tzs": 45000000,
+        "import_taxes_tzs": null,
+        "total_fine_tzs": null,
+        "brand_owner_confirmation_deadline": "2026-04-19",
+        "days_to_confirmation_deadline": 0,
+        "compoundment_form_f_submitted": false,
+        "compoundment_order": null
+      }
+    ],
+
+    "certificates": [
+      {
+        "id": "FCC-CERT-2024-001",
+        "type": "TRADEMARK_RECORDATION_CERTIFICATE",
+        "trademark_id": "TM-2026-001",
+        "trademark_name": "COCA-COLA",
+        "issued_to": "Coca-Cola Kwanza East Africa Ltd",
+        "issued_date": "2024-01-15",
+        "issued_by": "Dr. James Mwangi — Chief Inspector of Merchandise Marks",
+        "application_ref": "APP-2024-0001",
+        "classes": ["32", "33"],
+        "valid_from": "2024-01-15",
+        "valid_until": "2029-01-15",
+        "pdf_filename": "FCC-CERT-2024-001-CocaCola.pdf",
+        "qr_code_data": "FCC.GO.TZ/VERIFY/FCC-CERT-2024-001"
+      },
+      {
+        "id": "FCC-CERT-2023-045",
+        "type": "TRADEMARK_RECORDATION_CERTIFICATE",
+        "trademark_id": "TM-2026-002",
+        "trademark_name": "SAFARI LAGER",
+        "issued_to": "Tanzania Breweries Ltd",
+        "issued_date": "2023-06-10",
+        "issued_by": "Dr. James Mwangi — Chief Inspector of Merchandise Marks",
+        "classes": ["32"],
+        "valid_from": "2023-06-10",
+        "valid_until": "2026-06-10",
+        "pdf_filename": "FCC-CERT-2023-045-SafariLager.pdf",
+        "qr_code_data": "FCC.GO.TZ/VERIFY/FCC-CERT-2023-045"
+      },
+      {
+        "id": "FCC-CERT-2024-112",
+        "type": "TRADEMARK_RECORDATION_CERTIFICATE",
+        "trademark_id": "TM-2026-003",
+        "trademark_name": "AZAM",
+        "issued_to": "Said Salim Bakhresa & Co Ltd",
+        "issued_date": "2024-09-01",
+        "issued_by": "Dr. James Mwangi — Chief Inspector of Merchandise Marks",
+        "classes": ["29", "30", "32"],
+        "valid_from": "2024-09-01",
+        "valid_until": "2027-09-01",
+        "pdf_filename": "FCC-CERT-2024-112-AZAM.pdf",
+        "qr_code_data": "FCC.GO.TZ/VERIFY/FCC-CERT-2024-112"
+      },
+      {
+        "id": "FCC-CERT-2026-035",
+        "type": "TRADEMARK_RECORDATION_CERTIFICATE",
+        "trademark_id": "TM-2026-005",
+        "trademark_name": "SAMSUNG",
+        "issued_to": "Coca-Cola Kwanza East Africa Ltd",
+        "issued_date": "2026-03-20",
+        "issued_by": "Dr. James Mwangi — Chief Inspector of Merchandise Marks",
+        "classes": ["9", "35"],
+        "valid_from": "2026-03-20",
+        "valid_until": "2029-03-20",
+        "pdf_filename": "FCC-CERT-2026-035-Samsung.pdf",
+        "qr_code_data": "FCC.GO.TZ/VERIFY/FCC-CERT-2026-035"
+      },
+      {
+        "id": "FCC-RENEW-2026-012",
+        "type": "RENEWAL_CONFIRMATION_CERTIFICATE",
+        "trademark_id": "TM-2026-003",
+        "trademark_name": "AZAM",
+        "issued_to": "Bakhresa Food Products Ltd",
+        "issued_date": "2026-01-20",
+        "issued_by": "Dr. James Mwangi — Chief Inspector of Merchandise Marks",
+        "renewed_from": "2024-09-01",
+        "renewed_until": "2027-09-01",
+        "pdf_filename": "FCC-RENEW-2026-012-AZAM.pdf",
+        "qr_code_data": "FCC.GO.TZ/VERIFY/FCC-RENEW-2026-012"
+      },
+      {
+        "id": "FCC-NAME-2026-003",
+        "type": "NAME_CHANGE_CONFIRMATION",
+        "trademark_id": "TM-2026-003",
+        "trademark_name": "AZAM",
+        "old_name": "Said Salim Bakhresa & Co Ltd",
+        "new_name": "Bakhresa Food Products Ltd",
+        "issued_to": "Bakhresa Food Products Ltd",
+        "issued_date": "2026-02-20",
+        "issued_by": "Dr. James Mwangi — Chief Inspector of Merchandise Marks",
+        "pdf_filename": "FCC-NAME-2026-003-NameChange.pdf",
+        "qr_code_data": "FCC.GO.TZ/VERIFY/FCC-NAME-2026-003"
+      }
+    ],
+
+    "payments": [
+      {
+        "id": "PAY-2026-001",
+        "gepg_control_no": "GEPG-2026-88421",
+        "transaction_id": "TXN-GEPG-2026-88421-01",
+        "application_ref": "APP-2026-0041",
+        "payer_id": "u008",
+        "payer_name": "Advocate Paul Kimaro",
+        "amount_tzs": 200000,
+        "payment_type": "NEW_RECORDATION_FEE",
+        "bank": "CRDB Bank",
+        "payment_date": "2026-04-10",
+        "payment_time": "09:10:23",
+        "status": "SUCCESS",
+        "receipt_no": "REC-2026-88421"
+      },
+      {
+        "id": "PAY-2026-002",
+        "gepg_control_no": "GEPG-2026-77109",
+        "transaction_id": "TXN-GEPG-2026-77109-01",
+        "application_ref": "APP-2026-0035",
+        "payer_id": "u007",
+        "payer_name": "Coca-Cola Kwanza East Africa Ltd",
+        "amount_tzs": 200000,
+        "payment_type": "NEW_RECORDATION_FEE",
+        "bank": "NMB Bank",
+        "payment_date": "2026-03-01",
+        "status": "SUCCESS",
+        "receipt_no": "REC-2026-77109"
+      },
+      {
+        "id": "PAY-2026-003",
+        "gepg_control_no": "GEPG-2026-44008",
+        "transaction_id": "TXN-GEPG-2026-44008-01",
+        "application_ref": "APP-2026-0012",
+        "payer_id": "u008",
+        "payer_name": "Advocate Paul Kimaro",
+        "amount_tzs": 50000,
+        "payment_type": "RENEWAL_FEE",
+        "bank": "M-Pesa",
+        "payment_date": "2026-01-05",
+        "status": "SUCCESS",
+        "receipt_no": "REC-2026-44008"
+      },
+      {
+        "id": "PAY-2026-004",
+        "gepg_control_no": "GEPG-2026-33871",
+        "transaction_id": "TXN-GEPG-2026-33871-01",
+        "application_ref": "MAINT-2026-0003",
+        "payer_id": "u008",
+        "payer_name": "Advocate Paul Kimaro",
+        "amount_tzs": 100000,
+        "payment_type": "NAME_CHANGE_FEE",
+        "bank": "Equity Bank",
+        "payment_date": "2026-02-10",
+        "status": "SUCCESS",
+        "receipt_no": "REC-2026-33871"
+      },
+      {
+        "id": "PAY-2026-005",
+        "gepg_control_no": "GEPG-2026-91200",
+        "transaction_id": "TXN-GEPG-2026-91200-01",
+        "application_ref": "MAINT-2026-0005",
+        "payer_id": "u007",
+        "payer_name": "Coca-Cola Kwanza East Africa Ltd",
+        "amount_tzs": 150000,
+        "payment_type": "OWNERSHIP_CHANGE_FEE",
+        "bank": "NBC Bank",
+        "payment_date": "2026-04-05",
+        "status": "SUCCESS",
+        "receipt_no": "REC-2026-91200"
+      },
+      {
+        "id": "PAY-2026-006",
+        "gepg_control_no": "GEPG-2026-COMP-009",
+        "transaction_id": "TXN-GEPG-COMP-009-01",
+        "application_ref": "ENF-2026-0009",
+        "payer_id": null,
+        "payer_name": "Samora Electronics Ltd",
+        "amount_tzs": 32400000,
+        "payment_type": "COMPOUNDMENT_FINE",
+        "bank": "CRDB Bank",
+        "payment_date": "2026-04-16",
+        "status": "SUCCESS",
+        "receipt_no": "REC-COMP-2026-009"
+      }
+    ],
+
+    "notifications": [
+      {
+        "id": "NOTIF-001",
+        "user_id": "u007",
+        "type": "EXPIRY_ALERT",
+        "title": "Trademark Expiring Soon",
+        "message": "Your trademark SAFARI LAGER (TM-2026-002) will expire on 10 June 2026. Please submit a renewal application at least 30 days before expiry.",
+        "read": false,
+        "created_at": "2026-03-11T08:00:00Z",
+        "action_link": "/trademarks/TM-2026-002/renew"
+      },
+      {
+        "id": "NOTIF-002",
+        "user_id": "u008",
+        "type": "RECTIFICATION_REQUIRED",
+        "title": "Application Requires Rectification",
+        "message": "Your application APP-2026-0028 (PHILIPS) requires rectification. Missing: certified copy of trademark registration certificate. Deadline: 6 March 2026.",
+        "read": true,
+        "created_at": "2026-03-01T15:00:30Z",
+        "action_link": "/applications/APP-2026-0028"
+      },
+      {
+        "id": "NOTIF-003",
+        "user_id": "u007",
+        "type": "APPLICATION_APPROVED",
+        "title": "Application Approved",
+        "message": "Your application APP-2026-0035 (SAMSUNG) has been approved. Certificate FCC-CERT-2026-035 is ready for download.",
+        "read": true,
+        "created_at": "2026-03-20T10:00:06Z",
+        "action_link": "/certificates"
+      },
+      {
+        "id": "NOTIF-004",
+        "user_id": "u009",
+        "type": "SEIZURE_NOTICE",
+        "title": "Notice of Seizure — Cargo TANSAD-2026-880912",
+        "message": "Goods under TANSAD-2026-880912 (500 Nokia mobile handsets, JNIA) have been detained by FCC. Notice of Seizure has been issued. Contact FCC Anti-Counterfeits Division.",
+        "read": false,
+        "created_at": "2026-04-15T16:00:00Z",
+        "action_link": "/inspections/INS-2026-0087"
+      },
+      {
+        "id": "NOTIF-005",
+        "user_id": "u003",
+        "type": "NEW_APPLICATION_ASSIGNED",
+        "title": "New Application Assigned",
+        "message": "Application APP-2026-0041 (NOKIA) has been assigned to you for review and processing.",
+        "read": false,
+        "created_at": "2026-04-10T09:15:05Z",
+        "action_link": "/applications/APP-2026-0041"
+      },
+      {
+        "id": "NOTIF-006",
+        "user_id": "u004",
+        "type": "APPLICATION_ASSIGNED_TO_TRO",
+        "title": "Application Assigned for Assessment",
+        "message": "Application APP-2026-0041 (NOKIA) has been assigned to you by ACEM Bernard Okello for preliminary assessment.",
+        "read": true,
+        "created_at": "2026-04-11T10:30:00Z",
+        "action_link": "/applications/APP-2026-0041"
+      },
+      {
+        "id": "NOTIF-007",
+        "user_id": "u005",
+        "type": "SEIZURE_REPORT_SUBMITTED",
+        "title": "Seizure Report Submitted",
+        "message": "CSO Amina Rashid has submitted Seizure Report SEZ-2026-0012 for Inspection INS-2026-0087 (Nokia goods, JNIA). Brand owner must be contacted within 3 working days.",
+        "read": false,
+        "created_at": "2026-04-15T17:00:00Z",
+        "action_link": "/inspections/INS-2026-0087"
+      },
+      {
+        "id": "NOTIF-008",
+        "user_id": "u008",
+        "type": "PAYMENT_CONFIRMED",
+        "title": "Payment Confirmed",
+        "message": "Payment of TZS 200,000 for application APP-2026-0041 (NOKIA) has been confirmed. Reference: REC-2026-88421.",
+        "read": true,
+        "created_at": "2026-04-10T09:10:25Z",
+        "action_link": "/payments"
+      }
+    ],
+
+    "brela_mock_responses": [
+      {
+        "query_registration_no": "TZ-BRE-2019-04521",
+        "valid": true,
+        "trademark_name": "COCA-COLA",
+        "owner": "The Coca-Cola Company",
+        "owner_address": "One Coca-Cola Plaza, Atlanta, Georgia 30313, USA",
+        "class": ["32", "33"],
+        "status": "REGISTERED",
+        "registration_date": "2009-04-12",
+        "expiry_date": "2028-01-01",
+        "verification_ref": "BRELA-VER-2026-4521",
+        "response_time_ms": 1200
+      },
+      {
+        "query_registration_no": "TZ-BRE-2018-03210",
+        "valid": true,
+        "trademark_name": "SAFARI LAGER",
+        "owner": "Tanzania Breweries Limited",
+        "owner_address": "Industrial Area, Dar es Salaam, Tanzania",
+        "class": ["32"],
+        "status": "REGISTERED",
+        "registration_date": "2008-11-20",
+        "expiry_date": "2028-11-20",
+        "verification_ref": "BRELA-VER-2026-3210",
+        "response_time_ms": 980
+      },
+      {
+        "query_registration_no": "TZ-BRE-2020-07891",
+        "valid": true,
+        "trademark_name": "AZAM",
+        "owner": "Bakhresa Food Products Ltd",
+        "owner_address": "Bakhresa Complex, Msimbazi, Dar es Salaam",
+        "class": ["29", "30", "32"],
+        "status": "REGISTERED",
+        "registration_date": "2010-06-05",
+        "expiry_date": "2030-06-05",
+        "verification_ref": "BRELA-VER-2026-7891",
+        "response_time_ms": 870
+      },
+      {
+        "query_registration_no": "TZ-BRE-2023-11200",
+        "valid": true,
+        "trademark_name": "NOKIA",
+        "owner": "HMD Global Oy",
+        "owner_address": "Karaportti 8, 02610 Espoo, Finland",
+        "class": ["9"],
+        "status": "REGISTERED",
+        "registration_date": "2023-03-15",
+        "expiry_date": "2033-03-15",
+        "verification_ref": "BRELA-VER-2026-11200",
+        "response_time_ms": 1050
+      },
+      {
+        "query_registration_no": "TZ-BRE-2022-09901",
+        "valid": true,
+        "trademark_name": "SAMSUNG",
+        "owner": "Samsung Electronics Co. Ltd",
+        "owner_address": "129, Samsung-ro, Yeongtong-gu, Suwon-si, Korea",
+        "class": ["9", "35"],
+        "status": "REGISTERED",
+        "registration_date": "2012-08-10",
+        "expiry_date": "2032-08-10",
+        "verification_ref": "BRELA-VER-2026-9901",
+        "response_time_ms": 900
+      },
+      {
+        "query_registration_no": "INVALID-TEST-001",
+        "valid": false,
+        "trademark_name": null,
+        "owner": null,
+        "class": null,
+        "status": "NOT_FOUND",
+        "error_message": "No trademark registration found for the provided number in the BRELA database.",
+        "verification_ref": "BRELA-VER-2026-NOTFOUND",
+        "response_time_ms": 750
+      }
+    ],
+
+    "tanoga_shipments": [
+      {
+        "id": "TANOGA-TZ-2026-44512",
+        "booking_ref": "TANSAD-2026-881234",
+        "flagged_hs_codes": ["2202.10", "2202.90"],
+        "port": "Dar es Salaam Port",
+        "status": "FLAGGED",
+        "flagged_at": "2026-04-17T06:00:00Z",
+        "importer": "Kanda General Imports Ltd",
+        "cfa": "TanzaLog Freight Solutions Ltd",
+        "goods_summary": "2000 cartons carbonated beverages",
+        "sync_status": "SYNCED"
+      },
+      {
+        "id": "TANOGA-TZ-2026-44100",
+        "booking_ref": "TANSAD-2026-880912",
+        "flagged_hs_codes": ["8517.12"],
+        "port": "Julius Nyerere International Airport",
+        "status": "DETAINED",
+        "flagged_at": "2026-04-14T10:00:00Z",
+        "importer": "Kanda Imports and Distribution Ltd",
+        "cfa": "TanzaLog Freight Solutions Ltd",
+        "goods_summary": "500 units Nokia mobile handsets",
+        "sync_status": "SYNCED"
+      },
+      {
+        "id": "TANOGA-TZ-2026-43800",
+        "booking_ref": "TANSAD-2026-879100",
+        "flagged_hs_codes": ["1701.99"],
+        "port": "Holili OSBP",
+        "status": "CLEARED",
+        "flagged_at": "2026-04-10T08:00:00Z",
+        "importer": "Mtibwa Agro Traders Ltd",
+        "cfa": "TanzaLog Freight Solutions Ltd",
+        "goods_summary": "500 bags AZAM branded sugar",
+        "sync_status": "SYNCED"
+      },
+      {
+        "id": "TANOGA-TZ-2026-43200",
+        "booking_ref": "TANSAD-2026-878001",
+        "flagged_hs_codes": ["8509.40", "8509.80"],
+        "port": "Tunduma OSBP",
+        "status": "SEIZED",
+        "flagged_at": "2026-04-08T07:30:00Z",
+        "importer": "Samora Electronics Ltd",
+        "cfa": "TanzaLog Freight Solutions Ltd",
+        "goods_summary": "200 units counterfeit Philips appliances",
+        "sync_status": "SYNCED"
+      }
+    ],
+
+    "cso_rotation_schedule": [
+      {
+        "id": "ROT-Q2-2026-001",
+        "cso_id": "u006",
+        "cso_name": "Amina Rashid",
+        "port": "Dar es Salaam Port",
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "field_allowance_status": "PAID",
+        "field_allowance_amount_tzs": 450000,
+        "previous_port": "Holili OSBP"
+      },
+      {
+        "id": "ROT-Q2-2026-002",
+        "cso_id": "CSO-002",
+        "cso_name": "Joseph Kasanga",
+        "port": "Namanga OSBP",
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "field_allowance_status": "PENDING",
+        "field_allowance_amount_tzs": 380000,
+        "previous_port": "Julius Nyerere International Airport"
+      },
+      {
+        "id": "ROT-Q2-2026-003",
+        "cso_id": "CSO-003",
+        "cso_name": "Rehema Msangi",
+        "port": "Tunduma OSBP",
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "field_allowance_status": "PAID",
+        "field_allowance_amount_tzs": 420000,
+        "previous_port": "Dar es Salaam Port"
+      },
+      {
+        "id": "ROT-Q2-2026-004",
+        "cso_id": "CSO-004",
+        "cso_name": "Boniface Mwenda",
+        "port": "Julius Nyerere International Airport",
+        "start_date": "2026-04-01",
+        "end_date": "2026-06-30",
+        "field_allowance_status": "PAID",
+        "field_allowance_amount_tzs": 400000,
+        "previous_port": "Namanga OSBP"
+      }
+    ],
+
+    "kpi_dashboard_data": {
+      "application_management": {
+        "total_applications_this_year": 43,
+        "processed_within_21_days": 37,
+        "processed_within_21_days_pct": 86.0,
+        "approved": 31,
+        "rejected": 5,
+        "pending": 7,
+        "approval_rate_pct": 72.1,
+        "average_processing_days": 14.3,
+        "monthly_trend": [
+          { "month": "Nov 2025", "received": 6, "approved": 5, "rejected": 1 },
+          { "month": "Dec 2025", "received": 4, "approved": 3, "rejected": 0 },
+          { "month": "Jan 2026", "received": 7, "approved": 6, "rejected": 1 },
+          { "month": "Feb 2026", "received": 9, "approved": 7, "rejected": 1 },
+          { "month": "Mar 2026", "received": 11, "approved": 8, "rejected": 2 },
+          { "month": "Apr 2026", "received": 6, "approved": 2, "rejected": 0 }
+        ]
+      },
+      "maintenance_update": {
+        "total_maintenance_this_year": 18,
+        "renewals": 7,
+        "amendments": 5,
+        "ownership_changes": 3,
+        "name_changes": 3,
+        "approved_within_timeline_pct": 88.9,
+        "avg_renewal_processing_days": 9.2
+      },
+      "inspections": {
+        "total_inspections_this_year": 94,
+        "cleared": 73,
+        "detained": 14,
+        "seized": 7,
+        "clearance_rate_pct": 77.7,
+        "seizure_rate_pct": 7.4,
+        "avg_inspection_time_hours": 18.5,
+        "total_fines_collected_tzs": 45200000,
+        "by_port": [
+          { "port": "Dar es Salaam Port", "total": 42, "cleared": 35, "seized": 3 },
+          { "port": "JNIA Airport", "total": 18, "cleared": 12, "seized": 2 },
+          { "port": "Tunduma OSBP", "total": 14, "cleared": 10, "seized": 1 },
+          { "port": "Holili OSBP", "total": 12, "cleared": 9, "seized": 1 },
+          { "port": "Namanga OSBP", "total": 8, "cleared": 7, "seized": 0 }
+        ]
+      },
+      "landing_page_stats": {
+        "total_trademarks_recorded": 1247,
+        "applications_this_month": 43,
+        "ports_covered": 12,
+        "fines_collected_tzs": 245600000
+      }
+    },
+
+    "tro_register": [
+      {
+        "id": "TRO-REG-001",
+        "officer_id": "u004",
+        "officer_name": "Grace Nyamwezi",
+        "employee_id": "FCC-EMP-0010",
+        "section": "Anti-Counterfeit Enforcement Section",
+        "appointment_letter_no": "FCC-TRO-APPT-2022-010",
+        "appointed_by_ci": "u001",
+        "appointment_date": "2022-04-18",
+        "revocation_date": null,
+        "status": "ACTIVE",
+        "applications_assessed": 127,
+        "current_assignments": 3
+      },
+      {
+        "id": "TRO-REG-002",
+        "officer_id": "TRO-002",
+        "officer_name": "Emmanuel Kimathi",
+        "employee_id": "FCC-EMP-0011",
+        "section": "Counterfeits Surveillance Section",
+        "appointment_letter_no": "FCC-TRO-APPT-2023-011",
+        "appointed_by_ci": "u001",
+        "appointment_date": "2023-09-01",
+        "revocation_date": null,
+        "status": "ACTIVE",
+        "applications_assessed": 84,
+        "current_assignments": 1
+      }
+    ],
+
+    "public_register_search_results": {
+      "sample_search_query": "COCA",
+      "results": [
+        {
+          "trademark_id": "TM-2026-001",
+          "trademark_name": "COCA-COLA",
+          "owner_name": "Coca-Cola Kwanza East Africa Ltd",
+          "classes": ["32", "33"],
+          "status": "ACTIVE",
+          "recorded_date": "2024-01-15",
+          "expiry_date": "2029-01-15",
+          "certificate_no": "FCC-CERT-2024-001"
+        }
+      ],
+      "all_statuses": ["ACTIVE", "EXPIRING_SOON", "EXPIRED", "UNDER_REVIEW", "REQUIRES_RECTIFICATION"],
+      "all_classes": [
+        { "number": "1", "label": "Chemical products" },
+        { "number": "2", "label": "Paints and coatings" },
+        { "number": "3", "label": "Cleaning and cosmetic preparations" },
+        { "number": "5", "label": "Pharmaceutical and veterinary products" },
+        { "number": "9", "label": "Scientific, electronic and computing equipment" },
+        { "number": "11", "label": "Lighting and heating apparatus" },
+        { "number": "25", "label": "Clothing, footwear and headwear" },
+        { "number": "29", "label": "Meat, fish and processed foods" },
+        { "number": "30", "label": "Staple foods, coffee, tea, bread, pastry" },
+        { "number": "31", "label": "Fresh fruits, vegetables and live animals" },
+        { "number": "32", "label": "Non-alcoholic beverages, beer, mineral water" },
+        { "number": "33", "label": "Alcoholic beverages (except beer)" },
+        { "number": "35", "label": "Advertising and business management" },
+        { "number": "38", "label": "Telecommunications services" },
+        { "number": "42", "label": "Scientific and technology services" }
+      ]
+    }
+  }
+}

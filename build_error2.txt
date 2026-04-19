@@ -1,0 +1,27 @@
+
+> fcc-trademark@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.9s
+  Running TypeScript ...
+Failed to type check.
+
+./app/external/public-register/page.tsx:23:32
+Type error: Property 'filter' does not exist on type '{ sample_search_query: string; results: { trademark_id: string; trademark_name: string; owner_name: string; classes: string[]; status: string; recorded_date: string; expiry_date: string; certificate_no: string; }[]; all_statuses: string[]; all_classes: { ...; }[]; }'.
+
+  [90m21 |[0m           [36mreturn[0m;
+  [90m22 |[0m       }
+[31m[1m>[0m [90m23 |[0m       [36mconst[0m res = mockRegister.filter((r:any) => 
+  [90m   |[0m                                [31m[1m^[0m
+  [90m24 |[0m          r.trademark_name.toLowerCase().includes(search.toLowerCase()) ||
+  [90m25 |[0m          r.owner_name.toLowerCase().includes(search.toLowerCase())
+  [90m26 |[0m       );
+Next.js build worker exited with code: 1 and signal: null
+npm notice
+npm notice New major version of npm available! 10.8.3 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice

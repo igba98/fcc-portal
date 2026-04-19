@@ -1,0 +1,28 @@
+
+> fcc-trademark@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.0s
+  Running TypeScript ...
+Failed to type check.
+
+./app/external/payments/page.tsx:45:86
+Type error: Property 'payment_purpose' does not exist on type '{ id: string; gepg_control_no: string; transaction_id: string; application_ref: string; payer_id: string; payer_name: string; amount_tzs: number; payment_type: string; bank: string; payment_date: string; payment_time: string; status: string; receipt_no: string; } | { ...; } | { ...; }'.
+  Property 'payment_purpose' does not exist on type '{ id: string; gepg_control_no: string; transaction_id: string; application_ref: string; payer_id: string; payer_name: string; amount_tzs: number; payment_type: string; bank: string; payment_date: string; payment_time: string; status: string; receipt_no: string; }'.
+
+  [90m43 |[0m ...ssName=[32m"px-6 py-4 font-mono text-slate-600 tracking-wide text-xs"[0m>{payment.gepg_control...
+  [90m44 |[0m ...ssName=[32m"px-6 py-4 text-slate-600"[0m>{payment.payment_date}</td>
+[31m[1m>[0m [90m45 |[0m ...ssName=[32m"px-6 py-4 text-slate-600"[0m>{payment.payment_purpose}</td>
+  [90m   |[0m                                               [31m[1m^[0m
+  [90m46 |[0m ...ssName=[32m"px-6 py-4 text-right"[0m>
+  [90m47 |[0m ...[33mtton[0m variant=[32m"outline"[0m size=[32m"sm"[0m className=[32m"h-8 shadow-none bg-white font-medium"[0m disab...
+  [90m48 |[0m ... <[33mDownload[0m className=[32m"mr-2 h-4 w-4"[0m /> [33mDownload[0m
+Next.js build worker exited with code: 1 and signal: null
+npm notice
+npm notice New major version of npm available! 10.8.3 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice

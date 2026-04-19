@@ -1,0 +1,645 @@
+{
+  "project": {
+    "name": "FCC Trademark Recordation & Inspection System",
+    "type": "Next.js Full Frontend Prototype",
+    "client": "Fair Competition Commission (FCC), Tanzania",
+    "version": "1.0.0-prototype",
+    "description": "A fully functional frontend prototype with mock data, mock API routes, and Zustand state management. No real database. All CRUD operations work via in-memory Zustand store. Designed to feel like a live production system for stakeholder testing."
+  },
+
+  "tech_stack": {
+    "framework": "Next.js 15 (App Router, TypeScript)",
+    "styling": "Tailwind CSS v4",
+    "components": "shadcn/ui (latest) — use ALL components: Input, Button, Card, Calendar, Select, DropdownMenu, Dialog, Sheet, Badge, Table, Tabs, Toast, Tooltip, Avatar, Separator, Progress, Skeleton, Alert, AlertDialog, Command, Popover, ScrollArea",
+    "animation": "Framer Motion v11 — page transitions, card entrances, modal animations, loading states",
+    "state": "Zustand v5 — all mock CRUD state lives here, persisted with zustand/middleware persist to localStorage",
+    "pdf": "@react-pdf/renderer — for certificate and Form G generation",
+    "charts": "Recharts — for KPI dashboards",
+    "icons": "Lucide React",
+    "auth": "NextAuth.js v5 with CredentialsProvider — mock users from data/mock-users.ts",
+    "forms": "react-hook-form + zod validation",
+    "file_upload": "react-dropzone — mock upload (stores base64 or filename in state)"
+  },
+
+  "color_palette": {
+    "primary": "#1B3067",
+    "secondary": "#4950BC",
+    "accent": "#F59E0B",
+    "success": "#16A34A",
+    "danger": "#DC2626",
+    "warning": "#D97706",
+    "background": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "text_primary": "#0F172A",
+    "text_secondary": "#64748B"
+  },
+
+  "portals": {
+    "landing_page": {
+      "route": "/",
+      "description": "Public landing page with FCC branding, system description, and two prominent CTAs: 'External Portal Login' and 'FCC Staff Login'. Show animated stats: total trademarks recorded, applications processed, ports covered.",
+      "components": ["HeroSection", "StatsCounter", "FeaturesGrid", "CTAButtons"],
+      "animation": "Framer Motion stagger animation on feature cards"
+    },
+    "external": {
+      "base_route": "/(external)",
+      "description": "Portal for Trademark Owners, Authorized Agents, Clearing & Forwarding Agents, and Public",
+      "auth_roles": ["TRADEMARK_OWNER", "AUTHORIZED_AGENT", "CLEARING_FORWARDING_AGENT", "PUBLIC"],
+      "layout": "Top navigation bar with FCC logo, user avatar dropdown, notifications bell, breadcrumbs"
+    },
+    "internal": {
+      "base_route": "/(internal)",
+      "description": "Portal for all FCC staff roles",
+      "auth_roles": ["CHIEF_INSPECTOR", "DAC", "ACEM", "TRO", "ACSM", "CSO"],
+      "layout": "Left sidebar navigation (collapsible), top bar with user info, notifications, breadcrumbs"
+    }
+  },
+
+  "mock_users": [
+    {
+      "id": "u001", "name": "Dr. James Mwangi", "role": "CHIEF_INSPECTOR",
+      "email": "ci@fcc.go.tz", "password": "CI@2026", "portal": "internal",
+      "avatar": "JM", "department": "Anti-Counterfeits Division"
+    },
+    {
+      "id": "u002", "name": "Fatuma Salehe", "role": "DAC",
+      "email": "dac@fcc.go.tz", "password": "DAC@2026", "portal": "internal",
+      "avatar": "FS", "department": "Anti-Counterfeits Division"
+    },
+    {
+      "id": "u003", "name": "Bernard Okello", "role": "ACEM",
+      "email": "acem@fcc.go.tz", "password": "ACEM@2026", "portal": "internal",
+      "avatar": "BO", "department": "Enforcement"
+    },
+    {
+      "id": "u004", "name": "Grace Nyamwezi", "role": "TRO",
+      "email": "tro@fcc.go.tz", "password": "TRO@2026", "portal": "internal",
+      "avatar": "GN", "department": "Recordation Officers"
+    },
+    {
+      "id": "u005", "name": "Hamisi Juma", "role": "ACSM",
+      "email": "acsm@fcc.go.tz", "password": "ACSM@2026", "portal": "internal",
+      "avatar": "HJ", "department": "Surveillance"
+    },
+    {
+      "id": "u006", "name": "Amina Rashid", "role": "CSO",
+      "email": "cso@fcc.go.tz", "password": "CSO@2026", "portal": "internal",
+      "avatar": "AR", "department": "Field Inspections"
+    },
+    {
+      "id": "u007", "name": "Coca-Cola East Africa Ltd", "role": "TRADEMARK_OWNER",
+      "email": "legal@cocacola-ea.co.tz", "password": "Owner@2026", "portal": "external",
+      "entity_type": "company", "country": "Tanzania", "avatar": "CC"
+    },
+    {
+      "id": "u008", "name": "Advocate Paul Kimaro", "role": "AUTHORIZED_AGENT",
+      "email": "agent@kimalaw.co.tz", "password": "Agent@2026", "portal": "external",
+      "entity_type": "individual", "avatar": "PK"
+    },
+    {
+      "id": "u009", "name": "TanzaLog Freight Ltd", "role": "CLEARING_FORWARDING_AGENT",
+      "email": "ops@tanzalog.co.tz", "password": "CFA@2026", "portal": "external",
+      "entity_type": "company", "avatar": "TL"
+    },
+    {
+      "id": "u010", "name": "Public User", "role": "PUBLIC",
+      "email": "public@demo.com", "password": "Public@2026", "portal": "external",
+      "avatar": "PU"
+    }
+  ],
+
+  "mock_trademarks": [
+    {
+      "id": "TM-2026-001", "name": "COCA-COLA", "owner_id": "u007",
+      "status": "ACTIVE", "classes": ["32", "33"],
+      "registration_no": "TZ-BRE-2019-04521",
+      "recorded_date": "2024-01-15", "expiry_date": "2026-05-20",
+      "manufacturer": "The Coca-Cola Company, Atlanta, USA",
+      "certificate_no": "FCC-CERT-2024-001",
+      "image_url": "/mock-trademark-images/tm-001.png",
+      "goods_description": "Non-alcoholic beverages, syrups and concentrates",
+      "licensees": ["Coca-Cola Kwanza Ltd", "Bonite Bottlers Ltd"],
+      "agent_id": "u008"
+    },
+    {
+      "id": "TM-2026-002", "name": "SAFARI LAGER", "owner_id": "u007",
+      "status": "PENDING_RENEWAL", "classes": ["32"],
+      "registration_no": "TZ-BRE-2018-03210",
+      "recorded_date": "2023-06-10", "expiry_date": "2026-06-10",
+      "manufacturer": "Tanzania Breweries Ltd, Dar es Salaam",
+      "certificate_no": "FCC-CERT-2023-045",
+      "image_url": "/mock-trademark-images/tm-002.png",
+      "goods_description": "Beer and malt beverages",
+      "licensees": []
+    },
+    {
+      "id": "TM-2026-003", "name": "AZAM", "owner_id": "u007",
+      "status": "ACTIVE", "classes": ["29", "30", "32"],
+      "registration_no": "TZ-BRE-2020-07891",
+      "recorded_date": "2024-09-01", "expiry_date": "2027-09-01",
+      "manufacturer": "Bakhresa Group, Dar es Salaam, Tanzania",
+      "certificate_no": "FCC-CERT-2024-112",
+      "image_url": "/mock-trademark-images/tm-003.png",
+      "goods_description": "Food products, baked goods, beverages",
+      "licensees": ["Said Salim Bakhresa & Co Ltd"]
+    },
+    {
+      "id": "TM-2026-004", "name": "NOKIA", "owner_id": "u008",
+      "status": "UNDER_REVIEW", "classes": ["9"],
+      "registration_no": "TZ-BRE-2023-11200",
+      "recorded_date": null, "expiry_date": null,
+      "manufacturer": "HMD Global Oy, Helsinki, Finland",
+      "certificate_no": null,
+      "image_url": null,
+      "goods_description": "Mobile phones, telecommunications equipment",
+      "licensees": []
+    }
+  ],
+
+  "mock_applications": [
+    {
+      "id": "APP-2026-0041", "trademark_name": "NOKIA",
+      "applicant_id": "u008", "applicant_type": "AGENT",
+      "form_type": "FCC_FORM_1", "status": "UNDER_REVIEW",
+      "submitted_date": "2026-04-10",
+      "gepg_control_no": "GEPG-2026-88421",
+      "payment_status": "PAID", "payment_amount": 200000,
+      "assigned_acem": "u003", "assigned_tro": "u004",
+      "poa_uploaded": true, "documents_complete": true,
+      "tro_recommendation": null, "acem_decision": null, "ci_decision": null,
+      "notes": []
+    },
+    {
+      "id": "APP-2026-0035", "trademark_name": "SAMSUNG",
+      "applicant_id": "u007", "applicant_type": "TRADEMARK_OWNER",
+      "form_type": "FCC_FORM_1", "status": "APPROVED",
+      "submitted_date": "2026-03-01",
+      "gepg_control_no": "GEPG-2026-77109",
+      "payment_status": "PAID", "payment_amount": 200000,
+      "assigned_acem": "u003", "assigned_tro": "u004",
+      "poa_uploaded": false, "documents_complete": true,
+      "tro_recommendation": "APPROVE", "acem_decision": "APPROVE",
+      "ci_decision": "APPROVE",
+      "notes": ["All documents verified. BRELA confirms trademark validity."]
+    },
+    {
+      "id": "APP-2026-0028", "trademark_name": "PHILIPS",
+      "applicant_id": "u008", "applicant_type": "AGENT",
+      "form_type": "FCC_FORM_1", "status": "REQUIRES_RECTIFICATION",
+      "submitted_date": "2026-02-20",
+      "gepg_control_no": "GEPG-2026-66543",
+      "payment_status": "PAID", "payment_amount": 200000,
+      "assigned_acem": "u003", "assigned_tro": "u004",
+      "poa_uploaded": true, "documents_complete": false,
+      "tro_recommendation": "RECTIFY",
+      "acem_decision": null, "ci_decision": null,
+      "notes": ["Missing certified copy of registration certificate. Applicant notified on 2026-03-01."]
+    }
+  ],
+
+  "mock_inspections": [
+    {
+      "id": "INS-2026-0091",
+      "tanoga_ref": "TANOGA-TZ-2026-44512",
+      "tanesw_booking": "TANSAD-2026-881234",
+      "port": "Dar es Salaam Port",
+      "importer": "TanzaLog Freight Ltd",
+      "cfa_id": "u009",
+      "hs_codes": ["2202.10", "2202.90"],
+      "goods_description": "Carbonated beverages — 2000 cartons",
+      "country_of_origin": "China",
+      "assigned_cso_id": "u006",
+      "assigned_acsm_id": "u005",
+      "status": "FLAGGED",
+      "outcome": null,
+      "flagged_date": "2026-04-17",
+      "inspection_date": null,
+      "trademark_match": null,
+      "seizure_report": null
+    },
+    {
+      "id": "INS-2026-0087",
+      "tanoga_ref": "TANOGA-TZ-2026-44100",
+      "tanesw_booking": "TANSAD-2026-880912",
+      "port": "Julius Nyerere International Airport",
+      "importer": "Kanda Imports Ltd",
+      "cfa_id": "u009",
+      "hs_codes": ["8517.12"],
+      "goods_description": "Mobile handsets — 500 units",
+      "country_of_origin": "China",
+      "assigned_cso_id": "u006",
+      "assigned_acsm_id": "u005",
+      "status": "DETAINED",
+      "outcome": "COUNTERFEIT_SUSPECTED",
+      "flagged_date": "2026-04-14",
+      "inspection_date": "2026-04-15",
+      "trademark_match": "NOKIA (TM-2026-004)",
+      "seizure_report": {
+        "id": "SEZ-2026-0012",
+        "goods_value_tzs": 45000000,
+        "quantity": 500,
+        "brand_owner_notified": true,
+        "brand_owner_confirmed": null,
+        "fine_calculated": null,
+        "compoundment_order_no": null
+      }
+    },
+    {
+      "id": "INS-2026-0080",
+      "tanoga_ref": "TANOGA-TZ-2026-43800",
+      "tanesw_booking": "TANSAD-2026-879100",
+      "port": "Holili One Stop Border Post",
+      "importer": "Mtibwa Sugar Traders",
+      "cfa_id": "u009",
+      "hs_codes": ["1701.99"],
+      "goods_description": "Sugar — 500 bags",
+      "country_of_origin": "Brazil",
+      "assigned_cso_id": "u006",
+      "assigned_acsm_id": "u005",
+      "status": "CLEARED",
+      "outcome": "CLEARED",
+      "flagged_date": "2026-04-10",
+      "inspection_date": "2026-04-11",
+      "trademark_match": "AZAM (TM-2026-003)",
+      "seizure_report": null
+    }
+  ],
+
+  "mock_brela_responses": {
+    "TZ-BRE-2019-04521": {
+      "valid": true, "trademark_name": "COCA-COLA",
+      "owner": "The Coca-Cola Company", "expiry": "2028-01-01",
+      "status": "REGISTERED", "response_time_ms": 1200
+    },
+    "TZ-BRE-2023-11200": {
+      "valid": true, "trademark_name": "NOKIA",
+      "owner": "HMD Global Oy", "expiry": "2029-06-01",
+      "status": "REGISTERED", "response_time_ms": 900
+    },
+    "INVALID-001": {
+      "valid": false, "trademark_name": null,
+      "owner": null, "expiry": null,
+      "status": "NOT_FOUND", "response_time_ms": 800
+    }
+  },
+
+  "mock_gepg": {
+    "behavior": "When user clicks Pay, show a modal simulating GePG payment gateway. Generate a random control number format GEPG-{YEAR}-{5_DIGITS}. After 2 seconds loading, show 'Payment Successful' with receipt. Update application payment_status to PAID in Zustand store.",
+    "fees": {
+      "new_recordation": 200000,
+      "renewal": 50000,
+      "change_of_ownership": 150000,
+      "change_of_name": 100000,
+      "compoundment_fine": "calculated"
+    },
+    "receipt_fields": ["Control Number", "Amount (TZS)", "Transaction Date", "Payer Name", "Reference", "Status: SUCCESS"]
+  },
+
+  "pages": {
+
+    "landing": {
+      "route": "/",
+      "title": "FCC Trademark Recordation & Inspection System",
+      "sections": [
+        "Hero: FCC logo, system title, tagline 'Digital Transformation for Counterfeit Prevention', two CTA buttons: 'Access External Portal' (blue) and 'FCC Staff Login' (outline)",
+        "Stats bar: 3 animated counters — Trademarks Recorded: 1,247 | Applications This Month: 43 | Ports Covered: 12",
+        "Features grid (6 cards with icons): Electronic Register | Digital Workflows | Field Verification | GePG Payments | BRELA Integration | Counterfeit Prevention",
+        "How It Works: 3-step process with icons",
+        "Footer: FCC address, contacts, copyright"
+      ]
+    },
+
+    "login": {
+      "route": "/login",
+      "description": "Split screen: left side FCC branding with blue gradient, right side login form. Show tabs: 'External Portal' and 'Internal Portal (FCC Staff)'. Below form show 'Demo Credentials' expandable section listing all 10 users with their emails/passwords for testers.",
+      "fields": ["Email", "Password", "Remember Me"],
+      "validation": "zod — email required, password min 6 chars",
+      "on_success": "redirect based on role: TRADEMARK_OWNER/AGENT → /(external)/dashboard | CI/DAC/ACEM/TRO → /(internal)/dashboard | ACSM/CSO → /(internal)/inspections"
+    },
+
+    "register": {
+      "route": "/register",
+      "description": "Multi-step registration form (3 steps with progress indicator)",
+      "steps": [
+        "Step 1 — Entity Type Selection: Radio cards for Individual/Sole Proprietor, Partnership, Company/Corporation. Each card shows icon and description.",
+        "Step 2 — Entity Details: Conditional fields based on Step 1 selection. Individual: full name, nationality, address, phone, email, business description. Partnership: all partner names/nationalities, business name, contact info. Company: company name, country of incorporation, address, phone, email, business description.",
+        "Step 3 — Account Security: Password creation, confirm password, terms checkbox. On submit → show success animation → 'Confirmation email sent' screen."
+      ]
+    },
+
+    "external_dashboard": {
+      "route": "/(external)/dashboard",
+      "roles": ["TRADEMARK_OWNER", "AUTHORIZED_AGENT"],
+      "sections": [
+        "Welcome banner with user name and entity type",
+        "Stats cards: My Trademarks (3) | Pending Applications (1) | Expiring Soon (1) | Certificates Available (2)",
+        "Alerts banner: Yellow warning card for 'SAFARI LAGER expires in 51 days — Click to Renew'",
+        "Recent Applications table (last 5) with status badges",
+        "Quick Actions: New Application | Renew Trademark | Appoint Agent | Search Register"
+      ]
+    },
+
+    "new_application": {
+      "route": "/(external)/applications/new",
+      "description": "Multi-step Form FCC 1 — 5 steps with animated step indicator",
+      "steps": [
+        "Step 1 — Applicant Type: Toggle between 'I am the Trademark Owner' and 'I am an Authorized Agent'. If Agent selected, show drag-and-drop POA upload zone. Show POA requirements checklist.",
+        "Step 2 — Trademark Count: Number selector (1-10). Show fee calculation: TZS 200,000 × count = total. Animated total counter.",
+        "Step 3 — Form FCC 1 Details: Full name/entity, trademark name, trademark class (multi-select dropdown with Nice Classification 1-45), registration number, goods description, manufacturer name and country, licensed users (add/remove dynamic list), affiliated companies (add/remove dynamic list).",
+        "Step 4 — Document Upload: Drag-and-drop upload zones for: Trademark Registration Certificate (required), Trademark Images/Photos (required, multi-file), Evidence of Title (required), Licensing Arrangement Documents (optional), Power of Attorney if agent (conditional).",
+        "Step 5 — Payment: Show GePG Control Number (auto-generated on page load, format GEPG-2026-XXXXX). Payment amount summary. 'Proceed to Payment' button → opens GePG modal. After payment success → show Submit button → on submit → auto-generate Application Number → show success screen with confetti animation."
+      ]
+    },
+
+    "applications_list": {
+      "route": "/(external)/applications",
+      "description": "Table of all submitted applications with search, filter by status",
+      "columns": ["App No.", "Trademark Name", "Submitted Date", "Status", "Payment", "Actions"],
+      "status_badges": {
+        "PENDING_ASSIGNMENT": "gray",
+        "UNDER_REVIEW": "blue",
+        "REQUIRES_RECTIFICATION": "yellow",
+        "APPROVED": "green",
+        "REJECTED": "red"
+      },
+      "actions": ["View Details", "Upload Rectification (if REQUIRES_RECTIFICATION)", "Download Certificate (if APPROVED)"]
+    },
+
+    "trademark_detail_external": {
+      "route": "/(external)/trademarks/[id]",
+      "sections": [
+        "Trademark header: name, status badge, certificate number",
+        "Info cards: Owner, Classes, Registration No., Recorded Date, Expiry Date (with days remaining countdown)",
+        "Trademark images gallery",
+        "Licensees list",
+        "Agent info (if any)",
+        "Action buttons based on status: Renew | Amend | Change Ownership | Change Name | Appoint Agent | Download Certificate"
+      ]
+    },
+
+    "gepg_payment_modal": {
+      "description": "Full-screen modal simulating GePG gateway. Show FCC logo + GEPG logo. Display: Control Number, Amount, Description. Input fields: Payer Name (pre-filled), Bank selection dropdown (mock: CRDB, NMB, NBC, Equity, M-Pesa). 'Pay Now' button → 2 second spinner → Success screen with green checkmark animation → Receipt details → 'Download Receipt' button (generates PDF)."
+    },
+
+    "public_register": {
+      "route": "/(external)/public-register",
+      "description": "Publicly accessible trademark search. No login required.",
+      "search_bar": "Single search input with filter pills: All | By Name | By Reg. No. | By Owner | By Class | By Status",
+      "results": "Card grid showing: trademark name, status badge, classes, owner name, expiry date. Click card → trademark detail modal (public view — no sensitive agent/POA info).",
+      "empty_state": "Animated search illustration with 'No trademarks found' message"
+    },
+
+    "certificates_page": {
+      "route": "/(external)/certificates",
+      "description": "List of all certificates issued to the user. Table with: Certificate No., Type, Trademark, Issued Date, Download button. Clicking Download triggers @react-pdf/renderer to generate and download a styled PDF certificate with FCC letterhead, FCC seal/logo, trademark details, QR code (mock), CI signature line, and official formatting."
+    },
+
+    "internal_dashboard": {
+      "route": "/(internal)/dashboard",
+      "description": "Role-adaptive dashboard — content changes based on logged-in role",
+      "CI_DAC_view": [
+        "Stats: Total Applications (43) | Pending Approval (7) | Approved This Month (31) | Rejected (5)",
+        "Applications requiring CI action (status: ACEM_RECOMMENDED) — approval queue table",
+        "KPI charts: Applications per month (bar chart), Approval rate (pie chart), Processing time trend (line chart)",
+        "Recent enforcement actions"
+      ],
+      "ACEM_view": [
+        "Stats: Assigned to Me (12) | Awaiting TRO Review (5) | TRO Recommended (4) | Pending Approval (3)",
+        "Applications queue: filter by New / TRO Recommended / Needs Clarification",
+        "Quick assign to TRO buttons on each row"
+      ],
+      "TRO_view": [
+        "My assigned applications (6)",
+        "BRELA verification panel shortcut",
+        "Pending recommendations (3)"
+      ],
+      "ACSM_view": [
+        "Stats: Flagged Shipments (8) | Active Inspections (3) | Detained (2) | Cleared This Week (12)",
+        "TANOGA sync status indicator (mock green dot — 'Live')",
+        "Flagged shipments list with urgency indicators",
+        "CSO rotation schedule calendar"
+      ],
+      "CSO_view": [
+        "My assigned inspections today (2)",
+        "Map placeholder showing port locations",
+        "Recent inspection outcomes"
+      ]
+    },
+
+    "internal_applications": {
+      "route": "/(internal)/applications",
+      "description": "Full applications management queue for internal staff",
+      "features": [
+        "Filter tabs: All | New | Under Review | TRO Recommended | Pending CI | Approved | Rejected | Requires Rectification",
+        "Table columns: App No. | Trademark | Applicant | Submitted | Assigned To | Status | Days Elapsed | Actions",
+        "Days Elapsed shown in red if > 21 days (KPI breach)",
+        "Bulk actions: Assign to TRO (multi-select)",
+        "Click row → Application review page"
+      ]
+    },
+
+    "application_review": {
+      "route": "/(internal)/applications/[id]",
+      "description": "Full application review panel — layout changes based on role",
+      "sections": [
+        "Application header: App No., status badge, submitted date, days elapsed progress bar (0-21 days)",
+        "Applicant info card: entity type, contact details",
+        "Trademark info card: all Form FCC 1 fields in read-only view",
+        "Documents panel: list of uploaded documents with preview/download icons. Each document has a 'Verified ✓' checkbox (TRO can check off)",
+        "BRELA Verification: Button 'Verify with BRELA'. Clicking shows animated API call simulation (loading spinner 1.5s) → shows mock BRELA response card with green/red status",
+        "Timeline/Audit trail: vertical timeline of all actions with timestamps and user names",
+        "Review notes: text area for TRO to add notes. Previous notes shown below.",
+        "Action buttons by role: TRO → Recommend Approval | Request Rectification | Recommend Rejection. ACEM → Approve | Reject | Assign to Different TRO. CI → Final Approve | Final Reject.",
+        "All actions update Zustand store and add entry to audit trail instantly (no page reload)"
+      ]
+    },
+
+    "inspections_list": {
+      "route": "/(internal)/inspections",
+      "description": "TANOGA-synced flagged shipments list (ACSM/CSO view)",
+      "top_bar": "TANOGA Sync Status: green pulsing dot 'Connected — Last synced 2 min ago'. Button: 'Sync Now' → shows 2s animation → adds 1 new mock flagged shipment",
+      "table_columns": ["TANOGA Ref", "Port", "Importer", "Goods", "HS Codes", "Country of Origin", "Flagged Date", "Status", "Assigned CSO", "Actions"],
+      "status_badges": {
+        "FLAGGED": "yellow",
+        "ASSIGNED": "blue",
+        "IN_PROGRESS": "purple",
+        "CLEARED": "green",
+        "DETAINED": "orange",
+        "SEIZED": "red"
+      }
+    },
+
+    "inspection_detail": {
+      "route": "/(internal)/inspections/[id]",
+      "sections": [
+        "Shipment info: TANOGA ref, TANSAD number, importer, CFA, port, goods description, HS codes, country of origin",
+        "Container details: container number, seal number, gross weight, declared value (TZS)",
+        "Trademark Verification Panel: Search register inline. Show matching trademark(s) found. Green if valid recordation, red if not found or expired.",
+        "Physical Inspection Checklist: checkboxes — Documents examined ✓ | Country of origin verified ✓ | Trademark on goods matches registered ✓ | Packaging consistent ✓ | Quantity matches manifest ✓",
+        "Decision panel: CSO selects outcome: CLEARED or DETAIN. If DETAIN → shows seizure form.",
+        "Seizure form: goods description, quantity, estimated value (TZS), seizure reason, upload evidence photos. Submit → creates seizure record in store → notifies ACSM (mock toast notification).",
+        "For ACSM: shows 'Brand Owner Notification' button (marks notified in store). Shows 3-day countdown timer since detention."
+      ]
+    },
+
+    "enforcement": {
+      "route": "/(internal)/enforcement",
+      "description": "Seizure cases and compoundment management",
+      "sections": [
+        "Cases list: filtered by PENDING_BRAND_CONFIRMATION | CONFIRMED_COUNTERFEIT | COMPOUNDMENT_IN_PROGRESS | RESOLVED",
+        "Case detail: all seizure info, fine calculation panel"
+      ]
+    },
+
+    "enforcement_detail": {
+      "route": "/(internal)/enforcement/[id]",
+      "fine_calculator": {
+        "description": "Automated fine calculation per SOP Section 8.3.2",
+        "inputs": ["Goods declared value (TZS) — pre-filled from seizure report", "Applicable import taxes (TZS)", "Counterfeit confirmed (yes/no toggle)"],
+        "formula": "Fine = Goods Value + Taxes + (50% of Goods Value if Counterfeit)",
+        "display": "Live calculation updates as inputs change. Show breakdown table.",
+        "gepg_integration": "After ACEM confirms fine → system generates GePG control number → shows in Compoundment Order"
+      },
+      "form_g": {
+        "description": "Compoundment Order (Form G) — generated as PDF via @react-pdf/renderer",
+        "fields": ["Order No.", "Date", "Offender Name", "Goods Description", "Quantity", "Fine Amount (TZS)", "GePG Control No.", "Payment Deadline", "ACEM Signature block", "FCC Seal"]
+      },
+      "post_payment": [
+        "Payment confirmed (mock GePG) → show 'Generate Offloading Letter' button",
+        "Offloading Letter PDF generated",
+        "CSO records warehouse receipt → upload form → generates Warehouse Receipt PDF",
+        "Case status → RESOLVED"
+      ]
+    },
+
+    "reports": {
+      "route": "/(internal)/reports",
+      "description": "KPI analytics dashboard",
+      "charts": [
+        "Bar chart: Applications received per month (last 6 months) — Recharts",
+        "Pie chart: Application outcomes (Approved 72% / Rejected 12% / Pending 16%)",
+        "Line chart: Average processing time in days (target: 21) — trend over 6 months",
+        "Bar chart: Inspections per port (Dar es Salaam / JNIA / Holili / Namanga / Tunduma)",
+        "Pie chart: Inspection outcomes (Cleared 78% / Detained 15% / Seized 7%)",
+        "KPI cards: % processed in 21 days (87%) | Avg processing time (14 days) | Total fines collected TZS (45,200,000)"
+      ]
+    },
+
+    "brela_panel": {
+      "route": "/(internal)/brela",
+      "description": "Mock BRELA integration verification panel for TRO use",
+      "sections": [
+        "Search by registration number input",
+        "On search: 1.5s simulated API call animation → show result card",
+        "Result card: trademark name, owner, expiry, status (REGISTERED/NOT_FOUND/EXPIRED)",
+        "History: list of previous verifications done in this session",
+        "Integration status banner: 'BRELA API — Connected (Mock)'"
+      ]
+    }
+  },
+
+  "zustand_store_behavior": {
+    "description": "All data is stored in Zustand stores persisted to localStorage. No actual API calls to a real backend. The /api routes are mock routes that read/write from the same in-memory data initialized from /data/mock-*.ts files.",
+    "stores": {
+      "applicationsStore": "holds applications array. Actions: addApplication, updateApplication, deleteApplication, assignToACEM, assignToTRO, updateStatus, addNote",
+      "trademarksStore": "holds trademarks array. Actions: addTrademark, updateTrademark, renewTrademark, changeOwnership, changeName, amendDetails, discontinue",
+      "inspectionsStore": "holds inspections array. Actions: syncTANOGA (adds mock new entry), assignCSO, recordOutcome, createSeizureReport, updateSeizureStatus",
+      "enforcementStore": "holds enforcement cases. Actions: confirmCounterfeit, calculateFine, generateFormG, recordPayment, generateOffloadingLetter, generateWarehouseReceipt",
+      "notificationsStore": "holds notifications array. Actions: addNotification, markRead, markAllRead. Auto-adds notifications on: application status change, expiry approaching, seizure created, payment confirmed",
+      "usersStore": "holds users list. CI-only actions: addUser, updateRole, deactivateUser"
+    }
+  },
+
+  "mock_integrations": {
+    "gepg": {
+      "file": "src/lib/gepg.ts",
+      "behavior": "generateControlNumber() → returns GEPG-{YEAR}-{random 5 digits}. validatePayment(controlNo) → returns { success: true, transactionId, timestamp } after 2s delay. All payments are always 'successful' in mock."
+    },
+    "brela": {
+      "file": "src/lib/brela.ts",
+      "behavior": "verifyTrademark(registrationNo) → looks up mock-brela-responses. Returns result after 1.5s delay. Unknown registration numbers return NOT_FOUND. Animate the API call with a loading state."
+    },
+    "tanoga": {
+      "file": "src/lib/tanoga.ts",
+      "behavior": "syncShipments() → returns mock-inspections array with 1 new randomly generated entry added. getShipmentDetails(id) → returns full shipment from mock data. Flag status toggles realistically."
+    },
+    "pdf_certificates": {
+      "file": "src/lib/pdf.ts",
+      "description": "Use @react-pdf/renderer to generate PDFs for: (1) Trademark Recordation Certificate, (2) Renewal Confirmation Certificate, (3) Change of Ownership Certificate, (4) GePG Payment Receipt, (5) Compoundment Order Form G, (6) Offloading Letter, (7) Warehouse Receipt",
+      "certificate_template": "FCC letterhead (blue header with logo), document title, reference number, trademark details table, date issued, 'Issued by Chief Inspector of Merchandise Marks' signature block, FCC official seal, QR code placeholder (static image), footer with FCC address"
+    },
+    "email_notifications": {
+      "file": "src/lib/notifications.ts",
+      "behavior": "sendNotification(userId, type, message) → adds to notificationsStore. Shows toast in UI. Types: APPLICATION_SUBMITTED | APPLICATION_APPROVED | APPLICATION_REJECTED | RECTIFICATION_REQUIRED | EXPIRY_ALERT | SEIZURE_NOTICE | PAYMENT_CONFIRMED | CERTIFICATE_READY"
+    }
+  },
+
+  "animations": {
+    "library": "Framer Motion v11",
+    "page_transitions": "fadeInUp — each page wraps content in motion.div with initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}",
+    "card_entrance": "staggerChildren — cards animate in sequence with 0.1s stagger",
+    "modal_open": "scale from 0.95 to 1 with opacity 0 to 1",
+    "status_change": "AnimatePresence for badge transitions",
+    "loading_states": "Skeleton components from shadcn with pulse animation",
+    "success_state": "checkmark draw animation + scale bounce on approval/payment success",
+    "sidebar_collapse": "Framer Motion layout animation for sidebar expand/collapse",
+    "notifications_panel": "Slide in from right"
+  },
+
+  "routing_and_auth": {
+    "description": "Use NextAuth.js v5 CredentialsProvider. Session stores user id, role, portal, name. Middleware in src/middleware.ts protects routes by checking session role.",
+    "middleware_rules": [
+      "/(external)/* → requires session with role in [TRADEMARK_OWNER, AUTHORIZED_AGENT, CLEARING_FORWARDING_AGENT]",
+      "/(internal)/* → requires session with role in [CHIEF_INSPECTOR, DAC, ACEM, TRO, ACSM, CSO]",
+      "/(internal)/users/* → CI only",
+      "/(internal)/enforcement/* → ACEM, ACSM, DAC, CI only",
+      "/(external)/public-register → no auth required",
+      "/ → no auth required"
+    ],
+    "role_ui_hiding": "RoleGuard component wraps UI elements. Pass allowed={['ACEM','TRO']} — if current user role not in array, renders null. Use this for action buttons, menu items, and sensitive fields."
+  },
+
+  "forms_validation": {
+    "library": "react-hook-form + zod",
+    "common_schemas": {
+      "loginSchema": "email (valid email), password (min 6)",
+      "registerSchema": "entity_type (enum), conditional fields based on entity_type, email, password (min 8, must have uppercase + number), confirmPassword (must match)",
+      "fcc1Schema": "trademark_name (required), classes (array min 1), registration_no (required), goods_description (min 20 chars), manufacturer_name (required), manufacturer_country (required), documents (file array min 1)",
+      "renewalSchema": "renewal_certificate (file required), payment_confirmed (boolean true)",
+      "inspectionOutcomeSchema": "outcome (enum CLEARED/DETAIN), if DETAIN: seizure_reason (required), goods_value (number positive), quantity (number positive), evidence_photos (optional)"
+    }
+  },
+
+  "component_guidelines": {
+    "StatusBadge": "shadcn Badge with variant mapping: ACTIVE→green, PENDING→yellow, REJECTED→red, UNDER_REVIEW→blue, EXPIRED→gray, DETAINED→orange, SEIZED→destructive",
+    "ApplicationCard": "shadcn Card with hover shadow transition. Shows: app number, trademark name, status badge, submitted date, progress indicator showing current stage in CI→DAC→ACEM→TRO→DECISION pipeline",
+    "FileUploader": "react-dropzone + shadcn styling. Shows accepted file types, size limit. On upload: show file name, size, preview icon, remove button. Store as filename + mock base64 in state.",
+    "GePGModal": "shadcn Dialog. Full payment simulation. Cannot be closed during payment processing (loading state).",
+    "NotificationsPanel": "shadcn Sheet sliding from right. Bell icon in topbar with unread count badge. Shows notification list with icons by type, timestamp, mark-read.",
+    "BrelaVerification": "shadcn Card with input + button. Shows API status animation. Result uses green/red alert component.",
+    "Timeline": "Custom vertical timeline component using div + shadcn separator. Each entry: timestamp, user avatar+name, action description, optional note."
+  },
+
+  "instructions_for_claude": {
+    "start_with": "1. Initialize Next.js 15 project with TypeScript, Tailwind CSS v4, App Router. 2. Install all dependencies. 3. Configure shadcn/ui. 4. Set up Zustand stores with all mock data. 5. Build NextAuth config. 6. Build middleware. 7. Build landing page and login. 8. Build layouts (external + internal). 9. Build all pages in order listed in 'pages' section. 10. Build all mock integrations. 11. Build PDF generation.",
+    "critical_rules": [
+      "NEVER use placeholder 'Coming Soon' or empty pages — every page must have full content and functionality",
+      "ALL actions (create, approve, reject, assign, pay, upload) must update Zustand store and show immediate UI feedback",
+      "Every form must have full zod validation with error messages",
+      "Every page must use Framer Motion page transition wrapper",
+      "Use shadcn components for ALL inputs, buttons, selects, tables, modals — never plain HTML form elements",
+      "The system must feel like a live production app — use realistic Tanzanian names, TZS amounts, real port names, real trademark names",
+      "Add toast notifications (shadcn Sonner) for every user action: success, error, warning",
+      "All tables must have search + filter functionality",
+      "Dashboard stats cards must show animated number counters on load",
+      "PDF generation must produce properly formatted documents — not blank PDFs"
+    ],
+    "demo_credentials_banner": "On the login page, show a collapsible 'Demo Credentials' section listing all 10 users with their roles, emails, and passwords so testers can quickly switch accounts"
+  },
+
+  "dependencies": {
+    "install_command": "npm install next@latest react@latest react-dom@latest typescript @types/react @types/node tailwindcss @tailwindcss/forms framer-motion zustand react-hook-form zod @hookform/resolvers next-auth@beta @react-pdf/renderer recharts react-dropzone lucide-react sonner date-fns",
+    "shadcn_init": "npx shadcn@latest init",
+    "shadcn_components": "npx shadcn@latest add button input card badge table tabs dialog sheet select dropdown-menu calendar popover command scroll-area separator avatar progress skeleton alert alert-dialog tooltip"
+  }
+}

@@ -1,0 +1,53 @@
+
+> fcc-trademark@0.1.0 build
+> next build
+
+▲ Next.js 16.2.4 (Turbopack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.9s
+  Running TypeScript ...
+  Finished TypeScript in 4.9s ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/21) ...
+  Generating static pages using 9 workers (5/21) 
+  Generating static pages using 9 workers (10/21) 
+  Generating static pages using 9 workers (15/21) 
+✓ Generating static pages using 9 workers (21/21) in 641ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/auth/[...nextauth]
+├ ○ /external/applications
+├ ○ /external/applications/new
+├ ○ /external/certificates
+├ ○ /external/dashboard
+├ ○ /external/payments
+├ ○ /external/public-register
+├ ○ /external/trademarks
+├ ○ /internal/applications
+├ ƒ /internal/applications/[id]/review
+├ ○ /internal/dashboard
+├ ○ /internal/enforcement
+├ ○ /internal/inspections
+├ ƒ /internal/inspections/[id]
+├ ○ /internal/register
+├ ○ /internal/users
+├ ○ /internal/users/new
+├ ○ /login
+├ ○ /register
+└ ○ /verify-email
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+npm notice
+npm notice New major version of npm available! 10.8.3 -> 11.12.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.12.1
+npm notice To update run: npm install -g npm@11.12.1
+npm notice
